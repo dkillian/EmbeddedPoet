@@ -1,0 +1,62 @@
+[
+  {
+    "candidate_label":"Light \/ Dark",
+    "overlap_topwords":0.057,
+    "freq_per_1k":6.7,
+    "score":0.134
+  },
+  {
+    "candidate_label":"Faith \/ Heaven",
+    "overlap_topwords":0.061,
+    "freq_per_1k":6.3,
+    "score":0.133
+  },
+  {
+    "candidate_label":"Time \/ Eternity",
+    "overlap_topwords":0.029,
+    "freq_per_1k":4.3,
+    "score":0.088
+  },
+  {
+    "candidate_label":"Nature: Bees & Flowers",
+    "overlap_topwords":0.0,
+    "freq_per_1k":5.0,
+    "score":0.08
+  },
+  {
+    "candidate_label":"Death & Immortality",
+    "overlap_topwords":0.0,
+    "freq_per_1k":4.3,
+    "score":0.071
+  },
+  {
+    "candidate_label":"Home \/ Door \/ Room",
+    "overlap_topwords":0.0,
+    "freq_per_1k":4.0,
+    "score":0.067
+  },
+  {
+    "candidate_label":"Birds \/ Flight",
+    "overlap_topwords":0.0,
+    "freq_per_1k":2.7,
+    "score":0.047
+  },
+  {
+    "candidate_label":"Sea \/ Ship \/ Storm",
+    "overlap_topwords":0.0,
+    "freq_per_1k":0.7,
+    "score":0.013
+  },
+  {
+    "candidate_label":"Pain \/ Sorrow",
+    "overlap_topwords":0.0,
+    "freq_per_1k":0.7,
+    "score":0.013
+  },
+  {
+    "candidate_label":"Snake \/ Nature Frisson",
+    "overlap_topwords":0.0,
+    "freq_per_1k":0.0,
+    "score":0.0
+  }
+]

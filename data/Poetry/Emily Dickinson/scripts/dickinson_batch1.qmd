@@ -1,0 +1,131 @@
+---
+title: "Emily Dickinson — Poems"
+format:
+  html:
+    toc: true
+    number-sections: false
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+```{r include=F, warning=F, message=F}
+source("../../../prep (May 2025).R")
+```
+
+
+```{=html}
+<style>
+.poem-flex { 
+  display:flex; gap:1.5rem; align-items:flex-start;
+  border:1px solid #ddd; border-radius:12px; padding:16px; 
+  margin:1.25rem 0; max-width:120ch;
+}
+.poem-col, .summary-col { flex:1 1 0; min-width:0; }
+.poem-col pre { white-space:pre-wrap; overflow-wrap:anywhere; margin:0; }
+.summary-col { border-left:1px solid #eee; padding-left:16px; }
+.summary-col p { margin:.25rem 0 0; }
+.topic-chips { display:flex; flex-wrap:wrap; gap:.4rem; margin:.5rem 0 0; }
+.topic-chip { border:1px solid #ddd; padding:.15rem .5rem; border-radius:999px; font-size:.9em; background:#fafafa; }
+@media (max-width:820px){
+  .poem-flex { flex-direction:column; }
+  .summary-col { border-left:0; border-top:1px solid #eee; padding-left:0; padding-top:12px; }
+}
+</style>
+
+
+#| label: setup
+library(readr); library(dplyr); library(stringr); library(tidyr); library(htmltools)
+
+poems <- read_csv("dickinson analyzed.csv",
+  col_types = cols(
+    poem_id = col_double(),
+    .default = col_character()
+  ),
+  show_col_types = FALSE
+)
+
+# Be robust to missing columns
+for (nm in c("title","text","summary","topics","synopsis")) {
+  if (!nm %in% names(poems)) poems[[nm]] <- NA_character_
+}
+
+poems <- poems |>
+  mutate(
+    title    = coalesce(title, ""),
+    text     = coalesce(text, ""),
+    summary  = coalesce(summary, ""),
+    topics   = coalesce(topics, ""),
+    synopsis = coalesce(synopsis, "")
+  )
+
+
+
+
+```
+
+```{r}
+
+#| label: helpers
+#| echo: false
+#| include: false
+
+split_tags <- function(x) {
+  x <- trimws(x %||% "")
+  if (identical(x, "") || is.na(x)) return(character())
+  parts <- unlist(strsplit(x, "\\s*[|,]\\s*"))
+  parts[nzchar(parts)]
+}
+`%||%` <- function(a, b) if (is.null(a)) b else a
+
+```
+
+
+```{r}
+
+#| label: render
+#| results: asis
+
+poems_sorted <- poems |> arrange(poem_id, title)
+
+for (i in seq_len(nrow(poems_sorted))) {
+  this <- poems_sorted[i, ]
+  if (str_trim(this$title) == "" && str_trim(this$text) == "") next
+
+  header <- paste0(
+    if (!is.na(this$poem_id)) paste0(this$poem_id, " — ") else "",
+    this$title
+  )
+  cat("## ", header, "\n\n", sep = "")
+
+  txt        <- htmlEscape(this$text)
+  summary_tx <- htmlEscape(this$summary)
+  syn_tx     <- htmlEscape(this$synopsis)
+
+  tags <- split_tags(this$topics)
+  chips <- if (length(tags)) {
+    paste0(
+      '<div class="topic-chips">',
+      paste(sprintf('<span class="topic-chip">%s</span>', htmlEscape(tags)), collapse=""),
+      '</div>'
+    )
+  } else ""
+
+  cat(
+    '<div class="poem-flex">',
+      '<div class="poem-col"><pre>', txt, '</pre></div>',
+      '<div class="summary-col">',
+        if (nzchar(summary_tx)) paste0('<strong>Summary</strong><p>', summary_tx, '</p>') else '',
+        if (nzchar(syn_tx))     paste0('<h4>Synopsis</h4><p>',  syn_tx,     '</p>') else '',
+        if (length(tags))       '<h4>Topics</h4>' else '',
+        chips,
+      '</div>',
+    '</div>\n\n',
+    sep = ""
+  )
+}
+
+```
+
+

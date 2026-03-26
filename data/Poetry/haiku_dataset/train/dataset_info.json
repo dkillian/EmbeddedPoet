@@ -1,0 +1,62 @@
+{
+  "builder_name": "parquet",
+  "citation": "",
+  "config_name": "default",
+  "dataset_name": "haiku",
+  "dataset_size": 10959201,
+  "description": "",
+  "download_checksums": {
+    "hf://datasets/statworx/haiku@896d4d71b41650fd4051417f09359ebac86661ef/train.parquet": {
+      "num_bytes": 6261750,
+      "checksum": null
+    }
+  },
+  "download_size": 6261750,
+  "features": {
+    "source": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "text": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "text_phonemes": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "keywords": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "keyword_phonemes": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "gruen_score": {
+      "dtype": "float64",
+      "_type": "Value"
+    },
+    "text_punc": {
+      "dtype": "string",
+      "_type": "Value"
+    }
+  },
+  "homepage": "",
+  "license": "",
+  "size_in_bytes": 17220951,
+  "splits": {
+    "train": {
+      "name": "train",
+      "num_bytes": 10959201,
+      "num_examples": 49024,
+      "dataset_name": "haiku"
+    }
+  },
+  "version": {
+    "version_str": "0.0.0",
+    "major": 0,
+    "minor": 0,
+    "patch": 0
+  }
+}

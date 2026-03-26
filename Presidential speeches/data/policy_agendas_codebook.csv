@@ -1,0 +1,221 @@
+major_code,major_name,subtopic_code,subtopic_name
+1,Macroeconomics,100,General Domestic Macroeconomic Issues (includes combinations of multiple subtopics)
+1,Macroeconomics,101,Inflation and Interest Rates
+1,Macroeconomics,103,Unemployment Rate
+1,Macroeconomics,104,"Monetary Supply, Federal Reserve Board, and the Treasury"
+1,Macroeconomics,105,National Budget and Debt
+1,Macroeconomics,107,"Taxation, Tax policy, and Broad Tax Reform"
+1,Macroeconomics,108,Industrial Policy
+1,Macroeconomics,110,Price Control and Stabilization
+1,Macroeconomics,199,Other
+2,"Civil Rights, Minority Issues, and Civil Liberties",200,General (includes combinations of multiple subtopics)
+2,"Civil Rights, Minority Issues, and Civil Liberties",201,Ethnic Minority and Racial Group Discrimination
+2,"Civil Rights, Minority Issues, and Civil Liberties",202,"Gender, Identity and Sexual Orientation Discrimination"
+2,"Civil Rights, Minority Issues, and Civil Liberties",204,Age Discrimination
+2,"Civil Rights, Minority Issues, and Civil Liberties",205,Disability or Disease Discrimination
+2,"Civil Rights, Minority Issues, and Civil Liberties",206,"Voting Rights, Participation, and Related Issues"
+2,"Civil Rights, Minority Issues, and Civil Liberties",207,First Amendment Issues
+2,"Civil Rights, Minority Issues, and Civil Liberties",208,Right to Privacy and Access to Government Information
+2,"Civil Rights, Minority Issues, and Civil Liberties",209,Anti-Government Activities
+2,"Civil Rights, Minority Issues, and Civil Liberties",299,Other
+3,Health,300,General
+3,Health,301,Comprehensive health care reform
+3,Health,302,Health Insurance
+3,Health,321,"Regulation of drug industry, medical devices, and clinical labs"
+3,Health,322,"Facilities construction, regulation, and payments"
+3,Health,323,Provider and insurer payment and regulation
+3,Health,324,"Medical liability, fraud and abuse"
+3,Health,325,"Health Workforce, Licensing & Training"
+3,Health,331,Public health and disease prevention
+3,Health,332,Children and Prenatal Care
+3,Health,333,Mental Health and Cognitive Capacities
+3,Health,334,"Long-term care, home health, hospice, and rehabilitation services"
+3,Health,335,Prescription drug coverage and costs
+3,Health,336,Other or multiple benefits and procedures - Phasing Out
+3,Health,341,"Tobacco Abuse, Treatment, and Education"
+3,Health,342,"Substance, Alcohol and Drug Abuse, Treatment and Education"
+3,Health,398,Research and development
+3,Health,399,Other
+4,Agriculture,400,General (includes combinations of multiple subtopics)
+4,Agriculture,401,Agricultural Trade
+4,Agriculture,402,"Government Subsidies to Farmers and Ranchers, Agricultural Disaster Insurance"
+4,Agriculture,403,Food Inspection and Safety (including seafood)
+4,Agriculture,404,"Agricultural Marketing, Research, and Promotion"
+4,Agriculture,405,"Animal and Crop Disease, Pest Control, and Domesticated Animal Welfare"
+4,Agriculture,408,Fisheries and Fishing
+4,Agriculture,498,Agricultural Research and Development
+4,Agriculture,499,Other
+5,Labor and Employment,500,General (includes combinations of multiple subtopics)
+5,Labor and Employment,501,"Worker Safety and Protection, Occupational and Safety Health Administration"
+5,Labor and Employment,502,Employment Training and Workforce Development
+5,Labor and Employment,503,Employee Benefits
+5,Labor and Employment,504,Employee Relations and Labor Unions
+5,Labor and Employment,505,Fair Labor Standards
+5,Labor and Employment,506,"Youth Employment, Youth Job Corps Programs, and Child Labor"
+5,Labor and Employment,529,"Migrant and Seasonal workers, Farm Labor Issues"
+5,Labor and Employment,599,Other
+6,Education,600,General (includes combinations of multiple subtopics)
+6,Education,601,Higher Education
+6,Education,602,Elementary and Secondary Education
+6,Education,603,Education of Underprivileged Students
+6,Education,604,Vocational Education
+6,Education,606,Special Education
+6,Education,607,Educational Excellence
+6,Education,609,Arts and Humanities
+6,Education,610,Epistemic Humility
+6,Education,611,Education for Moral and Spiritual Development
+6,Education,698,Research and Development
+6,Education,699,Other
+7,Environment,700,General (includes combinations of multiple subtopics)
+7,Environment,701,Drinking Water Safety
+7,Environment,703,Waste Disposal
+7,Environment,704,"Hazardous Waste and Toxic Chemical Regulation, Treatment, and Disposal"
+7,Environment,705,"Air pollution, Climate Change, and Noise Pollution"
+7,Environment,707,Recycling
+7,Environment,708,Indoor Environmental Hazards
+7,Environment,709,Species and Habitat Protection
+7,Environment,710,Pollution and Conservation in Coastal & Other Navigable Waterways
+7,Environment,711,Land and Water Conservation
+7,Environment,798,Research and Development
+7,Environment,799,Other
+8,Energy,800,General (includes combinations of multiple subtopics)
+8,Energy,801,Nuclear Energy and Nuclear Regulatory Commission Issues
+8,Energy,802,Electricity and Hydroelectricity
+8,Energy,803,Natural Gas and Oil (Including Offshore Oil and Gas)
+8,Energy,805,Coal
+8,Energy,806,Alternative and Renewable Energy
+8,Energy,807,Energy Conservation
+8,Energy,898,Research and Development
+8,Energy,899,Other
+9,Immigration,900,Immigration and Refugee Issues
+10,Transportation,1000,General (includes combinations of multiple subtopics)
+10,Transportation,1001,Mass Transportation and Safety
+10,Transportation,1002,Roads and Highways
+10,Transportation,1003,Air Transportation and Safety
+10,Transportation,1005,Railroad Transportation and Safety
+10,Transportation,1006,Truck and Automobile Transportation and Safety
+10,Transportation,1007,"Maritime Issues, Including Safety and Security"
+10,Transportation,1010,Public Works (Infrastructure Development)
+10,Transportation,1098,Research and Development
+10,Transportation,1099,Other
+12,"Law, Crime, and Family Issues",1200,General (includes combinations of multiple subtopics)
+12,"Law, Crime, and Family Issues",1201,Executive Branch Agencies Dealing with Law and Crime
+12,"Law, Crime, and Family Issues",1202,White Collar Crime and Organized Crime
+12,"Law, Crime, and Family Issues",1203,"Illegal Drug Production, Trafficking, and Control"
+12,"Law, Crime, and Family Issues",1204,Court Administration
+12,"Law, Crime, and Family Issues",1205,Prisons
+12,"Law, Crime, and Family Issues",1206,Juvenile Crime and the Juvenile Justice System
+12,"Law, Crime, and Family Issues",1207,Child Abuse and Child Pornography
+12,"Law, Crime, and Family Issues",1208,Family Issues and Domestic Violence
+12,"Law, Crime, and Family Issues",1209,"Police, Fire, and Weapons Control"
+12,"Law, Crime, and Family Issues",1210,Criminal and Civil Code
+12,"Law, Crime, and Family Issues",1211,"Riots, Crime Prevention, and Crime Control"
+12,"Law, Crime, and Family Issues",1299,Other
+13,Social Welfare,1300,General
+13,Social Welfare,1301,Nutrition Assistance
+13,Social Welfare,1302,Cash Assistance to the Poor and General Poverty Issues
+13,Social Welfare,1303,Elderly Issues and Elderly Assistance Programs (Including Social
+13,Social Welfare,1304,Assistance to the Disabled
+13,Social Welfare,1305,Charities and Volunteer Associations
+13,Social Welfare,1308,Parental Leave and Child Care
+13,Social Welfare,1399,Other
+14,Community Development and Housing Issues,1400,General
+14,Community Development and Housing Issues,1401,Housing and Community Development
+14,Community Development and Housing Issues,1403,Urban Economic Development and General Urban Issues
+14,Community Development and Housing Issues,1404,Rural Housing
+14,Community Development and Housing Issues,1405,Rural Economic Development
+14,Community Development and Housing Issues,1406,Low and Middle-Income Housing Programs and Needs
+14,Community Development and Housing Issues,1407,Veterans Housing Assistance and Military Housing Programs
+14,Community Development and Housing Issues,1408,Elderly and Disabled Housing
+14,Community Development and Housing Issues,1409,Homeless Issues
+14,Community Development and Housing Issues,1410,Secondary Mortgage Market and Government Sponsored Housing Entities
+14,Community Development and Housing Issues,1499,Other
+15,"Banking, Finance, and Domestic Commerce",1500,General
+15,"Banking, Finance, and Domestic Commerce",1501,U.S. Banking System and Financial Institution Regulation
+15,"Banking, Finance, and Domestic Commerce",1502,Securities and Commodities Regulation
+15,"Banking, Finance, and Domestic Commerce",1504,"Consumer Finance, Mortgages, and Credit Cards"
+15,"Banking, Finance, and Domestic Commerce",1505,Insurance Regulation
+15,"Banking, Finance, and Domestic Commerce",1507,Bankruptcy
+15,"Banking, Finance, and Domestic Commerce",1520,Corporate Governance and Anti-Trust Issues
+15,"Banking, Finance, and Domestic Commerce",1521,Small Business Issues
+15,"Banking, Finance, and Domestic Commerce",1522,Intellectual Property
+15,"Banking, Finance, and Domestic Commerce",1523,Domestic Disaster Relief
+15,"Banking, Finance, and Domestic Commerce",1524,Tourism
+15,"Banking, Finance, and Domestic Commerce",1525,Consumer Safety and Consumer Fraud
+15,"Banking, Finance, and Domestic Commerce",1526,Sports and Gambling Regulation
+15,"Banking, Finance, and Domestic Commerce",1599,Other
+16,Defense,1600,General
+16,Defense,1602,"U.S. and Other Defense Alliances, U.S Security Assistance"
+16,Defense,1603,"Military Intelligence, CIA, Espionage"
+16,Defense,1604,"Military Readiness, Coordination of Armed Services Air Support and"
+16,Defense,1605,Arms Control and Nuclear Nonproliferation
+16,Defense,1606,Military Aid and Weapons Sales to other Countries
+16,Defense,1608,"Manpower, Military Personnel and Dependents (Army, Navy, Air Force,"
+16,Defense,1609,Veteran Affairs and Other Issues
+16,Defense,1610,Military Procurement and Weapons System Acquisitions and Evaluation
+16,Defense,1611,"Military Installations, Construction"
+16,Defense,1612,National Guard and Reserve Affairs
+16,Defense,1614,"Military Nuclear and Hazardous Waste Disposal, Military Environmental Compliance"
+16,Defense,1615,Civil Defense & Homeland Security
+16,Defense,1616,"DOD Civilian Personnel, Civilian Employment by the Defense Industry, Military"
+16,Defense,1617,Oversight of Defense Contracts and Contractors
+16,Defense,1619,Direct War Related Issues and Foreign Operations
+16,Defense,1620,Relief of Claims Against U.S. Military:
+16,Defense,1698,Research and Development
+16,Defense,1699,Other
+17,"Space, Science, Technology, and Communications",1700,General
+17,"Space, Science, Technology, and Communications",1701,"NASA, U.S. Government (including military) Use of Space, Space"
+17,"Space, Science, Technology, and Communications",1704,"Commercial Use of Space, Satellites"
+17,"Space, Science, Technology, and Communications",1705,"Science Technology Transfer, International Scientific Cooperation"
+17,"Space, Science, Technology, and Communications",1706,Telephone and Telecommunication Regulation (Including cellular phones)
+17,"Space, Science, Technology, and Communications",1707,"Broadcast Industry Regulation (TV, Cable, Radio), Broadband Internet and Spectrum"
+17,"Space, Science, Technology, and Communications",1708,"Weather Forecasting, Spatial Information Systems, including Geological"
+17,"Space, Science, Technology, and Communications",1709,"Computer Industry, Cyber Security, and the Internet"
+17,"Space, Science, Technology, and Communications",1798,Research and Development
+17,"Space, Science, Technology, and Communications",1799,Other
+18,Foreign Trade,1800,General
+18,Foreign Trade,1802,"Trade Negotiations, Disputes, and Agreements"
+18,Foreign Trade,1803,"Export Promotion and Regulation, Export-Import Bank"
+18,Foreign Trade,1804,International Private Business Investments
+18,Foreign Trade,1806,"Productivity and Competitiveness of U.S. Business, U.S. Balance of Payments"
+18,Foreign Trade,1807,"Tariff and Import Restrictions, Import Regulation and Outsourcing"
+18,Foreign Trade,1808,Exchange Rates and Related Issues
+18,Foreign Trade,1899,Other
+19,International Affairs and Foreign Aid,1900,General (Department of State and U.S. Information Agency appropriations)
+19,International Affairs and Foreign Aid,1901,U.S. Foreign Aid
+19,International Affairs and Foreign Aid,1902,International Resources Exploitation and Resources Agreement
+19,International Affairs and Foreign Aid,1905,Developing Countries Issues
+19,International Affairs and Foreign Aid,1906,International Finance and Economic Development
+19,International Affairs and Foreign Aid,1910,Western Europe and European Union Issues
+19,International Affairs and Foreign Aid,1915,Panama Canal Issues and Other International Canal Issues
+19,International Affairs and Foreign Aid,1921,Other Country/Region Specific Issues
+19,International Affairs and Foreign Aid,1925,Human Rights
+19,International Affairs and Foreign Aid,1926,"International Organizations other than Finance: United Nations (UN),"
+19,International Affairs and Foreign Aid,1927,"International Terrorism, Hijacking"
+19,International Affairs and Foreign Aid,1929,"U.S. Diplomats, U.S. Embassies, U.S. Citizens Abroad, Foreign Diplomats in the"
+19,International Affairs and Foreign Aid,1999,Other
+20,Government Operations,2000,General (includes budget requests and appropriations for multiple departments
+20,Government Operations,2001,Intergovernmental Relations
+20,Government Operations,2002,"Government Efficiency, General Regulatory Policy and Bureaucratic Oversight"
+20,Government Operations,2003,Postal Service Issues (Including Mail Fraud)
+20,Government Operations,2004,Civil Service Issues
+20,Government Operations,2005,Nominations and Appointments
+20,Government Operations,2006,"Currency, Commemorative Coins, Medals, U.S. Mint"
+20,Government Operations,2007,"Government Procurement, Procurement Fraud and Contractor Management"
+20,Government Operations,2008,Government Property Management
+20,Government Operations,2009,IRS Administration
+20,Government Operations,2010,"Executive Ethics, Impeachment & Scandal"
+20,Government Operations,2011,"Federal Government Branch Relations and Administrative Issues,"
+20,Government Operations,2012,"Regulation of Political Campaigns, Political Advertising, PAC regulation,"
+20,Government Operations,2013,Census
+20,Government Operations,2014,District of Columbia Affairs
+20,Government Operations,2015,Relief of Claims against the U.S. Government
+20,Government Operations,2030,Federal Holidays
+20,Government Operations,2099,Other
+21,Public Lands and Water Management,2100,General
+21,Public Lands and Water Management,2101,"National Parks, Memorials and Recreation"
+21,Public Lands and Water Management,2102,Native American Affairs
+21,Public Lands and Water Management,2103,"Natural Resources, Public Lands, and Forest Management"
+21,Public Lands and Water Management,2104,Water Resources Development
+21,Public Lands and Water Management,2105,U.S. Dependencies and Territorial Issues
+21,Public Lands and Water Management,2199,Other

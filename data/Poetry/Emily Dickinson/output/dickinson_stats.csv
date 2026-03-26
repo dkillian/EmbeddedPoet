@@ -1,0 +1,449 @@
+id,title,char_count,line_count,stanza_count,token_count,type_count,type_token_ratio,dash_count,dash_density,end_words,endword_repeat_ratio,nonstop_token_count
+1,SUCCESS.,311,15,3,52,45,0.8654,1,0.0192,sweetest;succeed;nectar;need;host;day;definition;victory;dying;ear;triumph;clear,0.0,30
+2,"Our share of night to bear,",204,9,2,40,24,0.6,0,0.0,bear;morning;fill;scorning;star;way;mist;day,0.0,18
+3,ROUGE ET NOIR.,196,10,2,36,34,0.9444,0,0.0,again;hazard;indeed;all;ballot;thee;caucus;soul,0.0,21
+4,ROUGE GAGNE.,569,21,3,111,70,0.6306,0,0.0,joy;poverty;i;throw;so;victory;death;breath;fail;sweet;defeat;prevail;sea;be;slow;thing;in;so,0.0556,56
+5,Glee! The great storm is over!,498,19,4,87,64,0.7356,0,0.0,over;land;together;sand;salvation;souls;bridegroom;shoals;shipwreck;door;forty;more;story;eye;question;reply,0.0,46
+6,"If I can stop one heart from breaking,",191,7,1,41,27,0.6585,0,0.0,breaking;vain;aching;pain;robin;again;vain,0.1429,23
+7,ALMOST!,236,10,1,40,33,0.825,0,0.0,reach;touched;way;village;away;violets;low;fingers;ago,0.0,25
+8,"A wounded deer leaps highest,",348,14,3,66,52,0.7879,0,0.0,highest;tell;death;still;gushes;springs;redder;stings;anguish;arm;blood;exclaim,0.0,37
+9,"The heart asks pleasure first,",214,9,2,39,29,0.7436,0,0.0,first;pain;anodynes;suffering;sleep;be;inquisitor;die,0.0,15
+10,IN A LIBRARY.,793,35,7,140,101,0.7214,0,0.0,is;book;wore;think;take;own;make;young;inspect;unfold;mind;old;most;ran;certainty;man;girl;wore;deified;before;familiar;town;true;sown;enchantment;go;heads;so,0.0357,71
+11,Much madness is divinest sense,223,8,1,38,30,0.7895,0,0.0,sense;eye;madness;majority;prevails;sane;dangerous;chain,0.0,21
+12,"I asked no other thing,",212,9,2,40,35,0.875,1,0.025,thing;denied;it;smiled;button;way;else;day,0.0,19
+13,EXCLUSION.,300,15,3,55,44,0.8,0,0.0,society;door;majority;more;pausing;gate;kneeling;mat;nation;one;attention;stone,0.0,31
+14,THE SECRET.,252,12,3,41,32,0.7805,1,0.0244,be;bee;elegy;be;eternity;me;rise;skies;lies,0.1111,18
+15,THE LONELY HOUSE.,949,45,5,175,123,0.7029,1,0.0057,road;of;barred;low;to;portico;creep;tools;peep;asleep;eyes;surprise;night;clock;tick;bark;tell;will;stir;aware;winked;star;stair;there;where;spoon;stone;brooch;grandmamma;there;too;slow;far;sycamore;chanticleer;there;away;where;astir;ajar,0.075,103
+16,"To fight aloud is very brave,",329,14,3,60,51,0.85,0,0.0,brave;know;bosom;woe;see;observe;country;love;procession;go;feet;snow,0.0,34
+17,DAWN.,223,10,2,43,36,0.8372,0,0.0,done;near;spaces;hair;ready;care;midnight;hour,0.0,23
+18,THE BOOK OF MARTYRS.,360,18,2,65,51,0.7846,0,0.0,strove;stouter;renounced;afraid;bore;witness;helped;cared;faith;fagot;hymn;drown;men;women;record;renown,0.0,37
+19,THE MYSTERY OF PAIN.,218,10,2,42,33,0.7857,0,0.0,blank;recollect;were;not;itself;contain;perceive;pain,0.0,16
+20,"I taste a liquor never brewed,",475,19,4,84,68,0.8095,0,0.0,brewed;pearl;rhine;alcohol;i;dew;days;blue;bee;door;drams;more;hats;run;tippler;sun,0.0,48
+21,A BOOK.,237,9,1,46,35,0.7609,0,0.0,words;robust;poor;dust;days;wings;liberty;brings,0.0,22
+22,"I had no time to hate, because",225,9,2,46,36,0.7826,0,0.0,because;me;i;enmity;since;be;thought;me,0.125,21
+23,UNRETURNING.,246,10,2,47,29,0.617,0,0.0,boat;bay;sea;away;wave;coast;sails;lost,0.0,25
+24,"Whether my bark went down at sea,",211,9,2,39,32,0.8205,1,0.0256,sea;gales;enchanted;sails;mooring;day;eye;bay,0.0,20
+25,"Belshazzar had a letter, â",195,8,1,33,30,0.9091,0,0.0,letter;one;correspondent;begun;copy;all;glasses;wall,0.0,19
+26,The brain within its groove,231,10,2,43,36,0.8372,0,0.0,groove;true;swerve;you;back;hills;themselves;mills;love,0.0,23
+27,MINE.,258,10,2,47,31,0.6596,0,0.0,election;seal;prison;conceal;veto;repeal;charter;steal,0.0,27
+28,BEQUEST.,217,10,2,38,29,0.7632,0,0.0,legacies;love;content;of;pain;sea;time;me,0.0,19
+29,Alter? When the hills do.,175,9,2,34,27,0.7941,0,0.0,do;sun;glory;one;daffodil;dew;friend;you,0.0,14
+30,SUSPENSE.,205,10,2,41,32,0.7805,0,0.0,to;room;await;doom;contains;endure;foot;door,0.0,18
+31,SURRENDER.,450,19,2,86,61,0.7093,0,0.0,companion;content;love;stint;forever;can;thee;own;spirit;before;knew;more;maiden;degree;might;heaven;thee,0.0588,39
+32,"If you were coming in the fall,",604,24,5,122,88,0.7213,0,0.0,fall;by;spurn;fly;year;balls;drawers;befalls;delayed;hand;dropped;land;out;be;rind;eternity;length;wing;bee;sting,0.0,58
+33,WITH A FLOWER.,236,10,2,40,29,0.725,0,0.0,flower;breast;too;rest;flower;vase;me;loneliness,0.125,19
+34,PROOF.,242,15,3,47,32,0.6809,0,0.0,love;proof;loved;enough;alway;thee;life;immortality;sweet;i;show;calvary,0.0,26
+35,"Have you got a brook in your little heart,",525,19,4,97,68,0.701,0,0.0,heart;blow;drink;so;flows;there;life;there;march;overflow;hills;go;be;lie;life;dry,0.125,52
+36,TRANSPLANTED.,337,13,1,57,46,0.807,0,0.0,flower;hem;latitudes;came;summer;sun;flowers;tongue;flower;in;only;therefrom,0.0833,30
+37,THE OUTLET.,166,12,4,30,24,0.8,0,0.0,thee;me;reply;graciously;brooks;nooks;sea;me,0.125,23
+38,IN VAIN.,1078,63,12,209,132,0.6316,0,0.0,you;life;there;shelf;to;up;porcelain;cup;housewife;broken;pleases;crack;you;wait;down;not;by;freeze;frost;privilege;you;face;jesus';grace;foreign;eye;he;by;how;know;to;not;sight;eyes;excellence;paradise;be;name;loudest;fame;saved;be;not;me;apart;here;ajar;are;prayer;sustenance;despair,0.1373,96
+39,RENUNCIATION.,967,37,8,169,113,0.6686,0,0.0,renunciation;full;me;saints;be;abroad;blew;passed;new;speech;word;sacrament;lord;church;time;show;lamb;will;hands;back;lands;failed;sound;crucifix;bond;rise;grave;justified;love,0.0,92
+40,LOVE'S BAPTISM.,626,22,3,112,78,0.6964,0,0.0,theirs;face;church;now;dolls;spools;too;choice;grace;name;dropped;up;diadem;first;breast;queen;erect;reject;throne,0.0,61
+41,RESURRECTION.,428,20,4,75,57,0.76,1,0.0133,time;come;god;time;met;gaze;privilege;eyes;them;new;beheld;now;this;host;seraphim;guest,0.0625,40
+42,APOCALYPSE.,288,15,3,60,43,0.7167,0,0.0,that;state;now;so;looks;eclipse;so;now;then;pain;compare;there,0.1667,30
+43,THE WIFE.,335,15,3,63,48,0.7619,0,0.0,dropped;life;work;wife;day;awe;gold;away;sea;weed;known;abide,0.0,31
+44,APOTHEOSIS.,206,12,3,34,33,0.9706,0,0.0,eden;thee;jasmines;bee;flower;hums;enters;balms;nature,0.0,25
+45,"New feet within my garden go,",228,9,2,40,29,0.725,0,0.0,go;sod;elm;solitude;green;below;returns;snow,0.0,29
+46,MAY-FLOWER.,221,15,3,37,32,0.8649,0,0.0,punctual;low;april;may;moss;knoll;robin;soul;beauty;thee;forswears;antiquity,0.0,26
+47,WHY?,300,18,3,63,47,0.746,0,0.0,bee;me;why;die;tell;hill;will;sneer;here;all;day;degree;how;so;tell,0.0667,29
+48,Perhaps you'd like to buy a flower?,276,12,3,53,44,0.8302,0,0.0,flower;sell;borrow;daffodil;bonnet;door;rows;draw;then;more,0.0,26
+49,The pedigree of honey,90,4,1,17,16,0.9412,0,0.0,honey;bee;him;aristocracy,0.0,7
+50,A SERVICE OF SONG.,387,15,3,72,50,0.6944,0,0.0,church;home;chorister;dome;surplice;wings;church;sings;clergyman;long;last;along,0.0833,37
+51,"The bee is not afraid of me,",233,9,2,42,34,0.8095,0,0.0,me;butterfly;woods;cordially;come;play;mists;day,0.0,26
+52,SUMMER'S ARMIES.,735,28,4,124,88,0.7097,1,0.0081,fair;cashmere;see;train;plain;away;bestir;whir;tune;sun;one;platoon;day;yesterday;twig;on;sun;bog;still;hill;stand;these;seas;land,0.0417,77
+53,THE GRASS.,577,25,5,111,74,0.6667,0,0.0,do;green;brood;entertain;tunes;along;lap;everything;pearls;fine;common;noticing;pass;divine;sleep;pine;barns;away;do;hay,0.05,52
+54,"A little road not made of man,",211,9,2,43,37,0.8605,0,0.0,man;eye;bee;butterfly;itself;say;vehicle;way,0.0,20
+55,SUMMER SHOWER.,483,20,4,89,63,0.7079,0,0.0,tree;roof;eaves;laugh;brook;sea;pearls;be;roads;sung;away;hung;lutes;glee;flag;away,0.0625,50
+56,PSALM OF THE DAY.,1037,44,11,178,122,0.6854,1,0.0056,day;away;me;noon;tune;ecstasy;night;bright;see;face;grace;me;rest;breast;bed;flag;crag;red;dews;prize;brows;name;delirium;them;stirred;bird;wood;ear;severe;before;came;worshipping;psalm,0.0303,110
+57,THE SEA OF SUNSET.,284,10,2,49,39,0.7959,0,0.0,washes;sea;rushes;mystery;traffic;bales;horizons;sails,0.0,27
+58,PURPLE CLOVER.,872,40,8,148,100,0.6757,1,0.0068,prefer;desire;democrat;aspire;pass;away;dearth;capacity;moon;gown;pasture;worn;june;green;countenance;seen;grass;herself;sun;life;full;blow;spice;jealousy;noon;sun;proclaimed;tune;host;last;aware;frost,0.0312,78
+59,THE BEE.,434,20,4,78,60,0.7692,0,0.0,plush;bee;goes;masonry;assault;consumes;away;blooms;gauze;gold;onyx;inlaid;chant;tune;experience;noon,0.0,44
+60,Presentiment is that long shadow on the lawn,139,4,1,25,19,0.76,0,0.0,lawn;down;grass;pass,0.0,12
+61,"As children bid the guest good-night,",247,9,2,42,35,0.8333,1,0.0238,night;turn;lips;on;wake;morn;cribs;again,0.0,21
+62,Angels in the early morning,255,9,2,43,30,0.6977,0,0.0,morning;among;flying;belong;hottest;among;flying;along,0.25,28
+63,"So bashful when I spied her,",330,14,3,59,42,0.7119,0,0.0,her;ashamed;leaflets;find;her;turned;blushing;beyond;dingle;dell;me;tell,0.0833,30
+64,TWO WORLDS.,338,15,3,55,44,0.8,3,0.0545,abroad;same;noons;flame;woods;day;jargoning;calvary;judgment;bee;rose;misery,0.0,28
+65,THE MOUNTAIN.,223,10,2,37,29,0.7838,0,0.0,plain;chair;omnifold;everywhere;knees;sire;he;ancestor,0.0,22
+66,A DAY.,472,22,5,90,71,0.7889,0,0.0,rose;time;amethyst;ran;bonnets;begun;myself;sun;not;stile;girls;while;side;gray;bars;away,0.0,46
+67,"The butterfly's assumption-gown,",179,7,2,26,24,0.9231,1,0.0385,gown;hung;on;descend;friend;town,0.0,14
+68,THE WIND.,606,26,5,112,84,0.75,0,0.0,abroad;me;boughs;melody;hand;sky;tune;me;bands;door;overhead;orchestra;boughs;be;chant;tree;sound;sky;rank;passed;company,0.1429,60
+69,DEATH AND LIFE.,207,9,1,36,33,0.9167,0,0.0,surprise;flower;play;power;on;unmoved;day;god,0.0,20
+70,'T was later when the summer went,236,9,2,43,29,0.6744,0,0.0,went;came;clock;home;went;came;pendulum;time,0.25,26
+71,INDIAN SUMMER.,551,24,6,100,74,0.74,0,0.0,back;two;look;on;june;mistake;bee;plausibility;belief;bear;air;leaf;days;haze;join;partake;break;wine,0.0,62
+72,AUTUMN.,233,10,2,45,35,0.7778,1,0.0222,were;brown;plumper;town;scarf;gown;fashioned;on,0.0,22
+73,BECLOUDED.,234,10,2,45,40,0.8889,0,0.0,mean;snow;rut;go;day;him;caught;diadem,0.0,25
+74,THE HEMLOCK.,460,20,4,82,64,0.7805,0,0.0,stand;snow;austerity;awe;wilderness;cloy;bald;necessity;cold;winds;him;wines;nought;don;play;run,0.0,46
+75,"There's a certain slant of light,",455,21,5,80,62,0.775,0,0.0,light;afternoons;weight;tunes;us;scar;difference;are;anything;despair;affliction;air;listens;breath;distance;death;eternity,0.0,47
+76,"One dignity delays for all,",432,19,4,73,61,0.8356,0,0.0,all;afternoon;purple;crown;footmen;throng;village;along;attendants;pause;parting;raise;ermine;i;escutcheon;die,0.0,43
+77,TOO LATE.,588,21,3,104,75,0.7212,0,0.0,know;snow;lay;breath;death;yesterday;be;glee;hill;pace;face;still;be;victory;round;thing;king;crowned,0.0556,54
+78,ASTRA CASTRA.,219,10,2,32,28,0.875,0,0.0,judgment;afternoon;leaning;on;cancelled;begun;disperse;alone,0.0,24
+79,"Safe in their alabaster chambers,",485,14,3,83,62,0.747,0,0.0,chambers;noon;resurrection;stone;sunshine;ear;cadence;here;them;row;surrender;snow,0.0,49
+80,"On this long storm the rainbow rose,",356,14,3,61,48,0.7869,0,0.0,rose;sun;elephants;down;nests;done;eyes;shone;death;bestir;syllables;her,0.0,36
+81,FROM THE CHRYSALIS.,326,15,3,64,47,0.7344,0,0.0,tease;air;wings;wear;be;fly;concedes;sky;hint;sign;last;divine,0.0,36
+82,SETTING SAIL.,230,10,2,39,31,0.7949,0,0.0,going;sea;headlands;eternity;mountains;understand;intoxication;land,0.0,21
+83,"Look back on time with kindly eyes,",121,4,1,23,22,0.9565,0,0.0,eyes;best;sun;west,0.0,15
+84,"A train went through a burial gate,",265,9,2,48,37,0.7708,1,0.0208,gate;sang;throat;rang;notes;again;him;men,0.0,25
+85,"I died for beauty, but was scarce",366,14,3,72,50,0.6944,0,0.0,scarce;tomb;lain;room;failed;replied;one;said;night;rooms;lips;names,0.0,33
+86,"""TROUBLED ABOUT MANY THINGS.""",466,15,3,80,62,0.775,0,0.0,staggered;tell;rivet;steel;often;hair;fingers;wear;window;pane;ceiling;lain,0.0,49
+87,REAL.,216,10,2,41,37,0.9024,0,0.0,agony;true;convulsion;throe;death;feign;forehead;strung,0.0,22
+88,THE FUNERAL.,216,10,2,39,34,0.8718,0,0.0,stir;once;illustrious;consequence;death;renown;accept;spurn,0.0,20
+89,"I went to thank her,",255,11,2,51,36,0.7059,0,0.0,her;slept;stone;foot;thrown;her;slept;sea;alive;slow,0.2,26
+90,I've seen a dying eye,224,8,1,43,34,0.7907,0,0.0,eye;room;seemed;become;fog;down;be;seen,0.0,21
+91,REFUGE.,263,9,1,46,40,0.8696,0,0.0,laid;push;fell;mice;stuff;tombs;reach;comes,0.0,29
+92,"I never saw a moor,",204,9,2,45,33,0.7333,0,0.0,moor;sea;looks;be;god;heaven;spot;given,0.0,22
+93,PLAYMATES.,229,10,2,35,31,0.8857,1,0.0286,angels;play;mates;straightway;promptly;sun;marbles;crown,0.0,23
+94,To know just how he suffered would be dear;,825,31,6,157,96,0.6115,0,0.0,dear;near;gaze;paradise;content;different;die;way;god;say;nature;day;any;accented;me;until;well;best;first;with;drowsiest;tranquil;know;grow;be;eternity,0.0,70
+95,"The last night that she lived,",657,29,6,117,82,0.7009,0,0.0,lived;night;us;different;things;before;minds;were;exist;quite;arose;infinite;passed;time;speak;came;forgot;reed;scarce;dead;hair;erect;was;regulate,0.0,61
+96,THE FIRST LESSON.,371,14,2,79,56,0.7089,0,0.0,face;place;be;life;shelf;me;so;know;wise;be;c;skies,0.0833,34
+97,The bustle in a house,193,9,2,34,31,0.9118,0,0.0,house;death;industries;earth;heart;away;again;eternity,0.0,18
+98,"I reason, earth is short,",255,14,3,49,35,0.7143,0,0.0,short;absolute;hurt;that;die;vitality;decay;that;heaven;even;given;that,0.1667,21
+99,Afraid? Of whom am I afraid?,322,14,3,63,50,0.7937,0,0.0,afraid;he;lodge;me;thing;me;existences;decree;east;morn;forehead;crown,0.0833,30
+100,DYING.,474,20,4,90,64,0.7111,0,0.0,still;afternoon;perceived;noon;still;grass;stopped;face;still;awake;myself;make;before;now;but;know,0.125,49
+101,Two swimmers wrestled on the spar,246,9,2,44,38,0.8636,0,0.0,spar;sun;land;one;face;borne;raised;thrown,0.0,28
+102,THE CHARIOT.,600,25,5,108,80,0.7407,0,0.0,death;me;ourselves;immortality;haste;away;too;civility;played;done;grain;sun;seemed;ground;visible;mound;each;day;heads;eternity,0.0,54
+103,She went as quiet as the dew,216,9,2,44,33,0.75,0,0.0,dew;flower;return;hour;star;eve;leverrier;believe,0.0,22
+104,RESURGAM.,190,7,1,36,29,0.8056,0,0.0,identified;side;see;star;are;day,0.0,21
+105,"Except to heaven, she is nought;",346,14,3,57,45,0.7895,1,0.0175,nought;lone;bee;blown;provincial;butterflies;dew;lies;grass;lawn;face;home,0.0,33
+106,Death is a dialogue between,234,9,2,42,33,0.7857,0,0.0,between;dust;sir;trust;ground;away;evidence;clay,0.0,24
+107,"It was too late for man,",214,9,2,40,34,0.85,0,0.0,man;god;help;side;heaven;had;face;god,0.125,19
+108,ALONG THE POTOMAC.,420,20,4,78,67,0.859,1,0.0128,died;boy;potomac;victory;slowly;turned;angle;round;paradise;decide;conduct;testified;apparition;boy;brain;sky,0.0625,39
+109,"The daisy follows soft the sun,",393,13,2,68,53,0.7794,0,0.0,sun;done;feet;near;here;sweet;sun;decline;thee;west;amethyst;possibility,0.0833,42
+110,EMANCIPATION.,354,20,4,66,56,0.8485,0,0.0,me;liberty;bone;one;saw;scymitar;be;flee;nest;divest;sky;thou;be;enemy;consciousness;liberty,0.125,39
+111,LOST.,219,10,2,46,41,0.8913,0,0.0,day;found;stars;bound;it;eye;ducats;me,0.0,24
+112,If I shouldn't be alive,181,9,2,38,32,0.8421,0,0.0,alive;come;cravat;crumb;you;asleep;trying;lip,0.0,19
+113,"Sleep is supposed to be,",366,19,5,70,44,0.6286,0,0.0,be;sanity;eye;grand;hand;stand;be;degree;day;occurred;be;eternity;gay;array;day,0.2,34
+114,"I shall know why, when time is over,",289,9,2,57,40,0.7018,0,0.0,over;why;anguish;sky;promised;woe;anguish;now,0.125,23
+115,"I never lost as much but twice,",6636,69,28,1098,508,0.4627,11,0.01,twice;sod;beggar;god;descending;store;father;more;poems;dickinson;series;friends;higginson;preface;beauties;wrote;light;soul;yours;jackson;verse;picture;winter;accuracy;friend;rhymes;hearing;rare;pretence;presence;todd;massachusetts;august;captives;eyes;plucking;paradise;whisper;moor;errand;prayer;life,0.0,560
+116,I'm nobody! Who are you?,224,9,2,47,37,0.7872,0,0.0,you;too;tell;know;somebody;frog;day;bog,0.0,23
+117,I bring an unaccustomed wine,643,27,7,125,86,0.688,0,0.0,wine;mine;drink;essay;away;look;glass;alas;cold;warm;lain;mould;be;me;speak;cup;drop;slake;me;me;awake,0.0952,67
+118,"The nearest dream recedes, unrealized.",448,15,2,60,49,0.8167,1,0.0167,unrealized;chase;bee;boy;race;clover;deploys;clouds;pinnace;boy;sky;honey;not;variety,0.0714,38
+119,"We play at paste,",179,8,1,29,26,0.8966,1,0.0345,paste;pearl;paste;fool;similar;hands;tactics;sands,0.125,18
+120,I found the phrase to every thought,229,9,2,46,39,0.8478,0,0.0,thought;one;hand;sun;dark;begin;cochineal;mazarin,0.0,21
+121,HOPE.,354,15,3,70,49,0.7,0,0.0,feathers;soul;words;all;heard;storm;bird;warm;land;sea;extremity;me,0.0,35
+122,THE WHITE HEAT.,496,20,4,80,63,0.7875,0,0.0,heat;door;tint;ore;conditions;plays;light;blaze;blacksmith;din;forge;within;ores;blaze;light;forge,0.1875,52
+123,TRIUMPHANT.,400,20,4,67,52,0.7761,0,0.0,unprepared;find;flagons;tamarind;league;explore;territories;shore;overcome;say;taken;day;bearest;thou;promoted;brow,0.0,45
+124,THE TEST.,354,18,2,66,55,0.8333,0,0.0,grief;it;that;joy;feet;drunken;smile;liquor;all;pain;discipline;hang;giants;men;himmaleh;him,0.0,37
+125,ESCAPE.,210,10,2,38,32,0.8421,0,0.0,escape;blood;expectation;attitude;broad;down;bars;again,0.0,22
+126,COMPENSATION.,200,10,2,33,30,0.9091,0,0.0,instant;pay;ratio;ecstasy;hour;years;farthings;tears,0.0,20
+127,THE MARTYRS.,340,15,3,54,42,0.7778,0,0.0,suffering;trod;temptation;god;company;round;meteor;bound;troth;fair;degree;air,0.0,36
+128,A PRAYER.,854,35,7,159,106,0.6667,0,0.0,needs;heaven;lie;even;both;prayer;stipulate;pair;prayed;me;yours;me;face;withdrew;me;too;might;threw;up;too;extant;true;ask;you;skies;air;first;infer,0.1071,80
+129,The thought beneath so slight a film,120,4,1,21,19,0.9048,0,0.0,film;seen;surge;apennine,0.0,11
+130,The soul unto itself,205,9,2,37,30,0.8108,0,0.0,itself;friend;spy;send;own;fear;itself;awe,0.125,16
+131,Surgeons must be very careful,116,4,1,18,17,0.9444,0,0.0,careful;knife;incisions;life,0.0,11
+132,THE RAILWAY TRAIN.,460,20,4,82,57,0.6951,0,0.0,miles;up;tanks;step;mountains;peer;roads;pare;between;while;stanza;hill;boanerges;star;omnipotent;door,0.0,40
+133,THE SHOW.,108,7,1,22,19,0.8636,0,0.0,show;go;me;be;play;see,0.0,9
+134,Delight becomes pictorial,214,9,2,34,29,0.8529,0,0.0,pictorial;pain;impossible;gain;distance;lies;little;skies,0.0,19
+135,A thought went up my mind to-day,357,14,3,74,50,0.6757,1,0.0135,day;before;back;year;came;me;was;say;know;before;all;more,0.0833,26
+136,Is Heaven a physician?,195,9,2,34,27,0.7941,0,0.0,physician;heal;posthumous;unavailable;exchequer;owe;negotiation;to,0.0,14
+137,THE RETURN.,438,15,2,78,53,0.6795,1,0.0128,late;compensate;ecstasy;me;dark;knock;be;agony;burn;turn;say;me;way,0.0769,37
+138,"A poor torn heart, a tattered heart,",466,17,2,81,59,0.7284,0,0.0,heart;rest;day;west;descend;burn;vision;unknown;way;espied;toil;god;barefoot;gales;hand;sails,0.0,45
+139,TOO MUCH.,780,28,4,130,88,0.6769,0,0.0,see;degree;round;shamed;blamed;behind;see;me;prayer;yesterday;sabachthani;here;see;me;joy;justify;calvary;crucify;say;gethsemane;beyond;define;wine;understand,0.125,73
+140,SHIPWRECK.,321,16,3,56,42,0.75,1,0.0179,tossed;knew;blast;spun;morn;slipped;stepped;tripped;sight;night;you;blue;you,0.0769,31
+141,"Victory comes late,",384,16,1,71,61,0.8592,1,0.0141,late;lips;frost;it;tasted;drop;economical;us;toe;mouths;robins;breakfast;them;sparrows;love;starve,0.0,43
+142,ENOUGH.,467,18,2,93,69,0.7419,0,0.0,bird;me;starve;luxury;feat;mine;chance;coveting;around;ear;board;fair;feel;earl;crumb;all,0.0,45
+143,Experiment to me,177,9,2,34,28,0.8235,0,0.0,me;meet;kernel;nut;tree;plausibly;requisite;me,0.125,17
+144,MY COUNTRY'S WARDROBE.,255,10,2,43,39,0.907,0,0.0,gown;sweet;lexington;fit;stars;discreet;attitude;bayonet,0.0,26
+145,Faith is a fine invention,93,4,1,16,16,1.0,0,0.0,invention;see;prudent;emergency,0.0,8
+146,"Except the heaven had come so near,",243,9,2,50,37,0.74,0,0.0,near;door;so;before;depart;see;loss;me,0.0,23
+147,Portraits are to daily faces,93,4,1,18,16,0.8889,0,0.0,faces;west;sunshine;vest,0.0,10
+148,THE DUEL.,223,10,2,49,36,0.7347,0,0.0,hand;world;had;bold;myself;fell;large;small,0.0,17
+149,A shady friend for torrid days,326,14,3,58,44,0.7586,0,0.0,days;find;temperature;mind;east;away;firmer;organdy;weaver;thread;paradise;made,0.0,32
+150,THE GOAL.,474,25,5,83,65,0.7831,0,0.0,centre;still;nature;goal;be;fair;temerity;dare;heaven;reach;raiment;touch;distance;high;diligence;sky;venture;then;endeavoring;again,0.0,49
+151,SIGHT.,614,25,5,116,74,0.6379,2,0.0172,out;see;eyes;way;day;sky;heart;me;mine;stars;take;eyes;birds;road;liked;dead;soul;pane;eyes;sun,0.1,55
+152,Talk with prudence to a beggar,244,9,2,42,34,0.8095,0,0.0,beggar;mines;hungry;wines;captive;feet;dungeons;sweet,0.0,23
+153,THE PREACHER.,328,10,2,58,46,0.7931,0,0.0,narrow;define;liar;sign;presence;shun;jesus;man,0.0,34
+154,Good night! which put the candle out?,387,13,2,66,52,0.7879,0,0.0,out;doubt;knew;wick;diligent;you;spark;dark;see;lamp;camp;reveille,0.0,34
+155,"When I hoped I feared,",165,8,1,31,25,0.8065,0,0.0,feared;dared;alone;remain;harm;charm;doom;him,0.0,17
+156,DEED.,218,10,2,45,33,0.7333,0,0.0,thought;will;spot;well;act;still;god;audible,0.0,17
+157,TIME'S LESSON.,227,10,2,45,38,0.8444,0,0.0,old;revenge;departs;avenge;flits;meat;dead;fat,0.0,25
+158,REMORSE.,329,15,3,56,46,0.8214,0,0.0,awake;astir;acts;door;soul;match;facilitate;despatch;disease;heal;institution;hell,0.0,30
+159,THE SHELTER.,209,10,2,35,30,0.8571,0,0.0,outside;way;hide;alway;inviting;betray;shelter;honesty,0.0,21
+160,Undue significance a starving man attaches,222,9,2,37,32,0.8649,0,0.0,attaches;food;hopeless;good;us;fly;distance;savory,0.0,22
+161,"Heart not so heavy as mine,",519,24,5,94,71,0.7553,1,0.0106,mine;home;window;tune;ballad;street;ear;sweet;bobolink;way;carolled;away;brook;way;minuets;why;again;sore;window;more,0.1,50
+162,"I many times thought peace had come,",234,9,2,44,36,0.8182,0,0.0,come;away;land;sea;prove;i;shores;lie,0.0,24
+163,Unto my books so good to turn,446,19,4,77,61,0.7922,0,0.0,turn;days;abstinence;praise;guests;be;time;library;without;men;night;within;shelf;bland;prospective;obtained,0.0,46
+164,"This merit hath the worst, â",224,9,2,40,33,0.825,0,0.0,worst;again;last;stone;breathe;round;longer;hound,0.0,22
+165,HUNGER.,591,25,5,115,76,0.6609,1,0.0087,years;dine;near;wine;seen;lone;wealth;own;bread;crumb;shared;room;new;odd;bush;road;found;way;windows;away,0.0,56
+166,"I gained it so,",368,16,2,68,48,0.7059,0,0.0,so;slow;grow;me;high;sky;strategy;it;all;it;fall;go;grace;face;ago,0.0667,32
+167,"To learn the transport by the pain,",453,19,4,76,58,0.7632,0,0.0,pain;sun;suspecting;run;feet;shore;while;air;anguish;woe;laureates;below;carol;indeed;scholars;bard,0.0,45
+168,RETURNING.,680,30,6,130,86,0.6615,0,0.0,home;door;face;before;mine;there;left;there;nerve;near;rolled;ear;laugh;door;faced;before;latch;care;spring;there;off;glass;thief;house,0.1667,64
+169,PRAYER.,202,10,2,37,33,0.8919,0,0.0,implement;reach;them;speech;ear;hear;apparatus;prayer,0.0,18
+170,I know that he exists,350,19,4,68,55,0.8088,0,0.0,exists;silence;life;eyes;play;ambush;bliss;surprise;play;earnest;glaze;stare;fun;expensive;jest;far,0.0625,38
+171,MELODIES UNHEARD.,600,21,3,105,79,0.7524,0,0.0,everywhere;air;strife;dawn;town;life;nest;dressed;man;read;led;afternoon;play;majority;men;place;face;ascertain,0.0,59
+172,CALLED BACK.,540,25,5,97,71,0.732,0,0.0,saved;by;eternity;back;side;tide;feel;tell;shores;doors;seal;stay;see;unheard;eye;tarry;steal;centuries;wheel;love,0.0,56
+173,CHOICE.,356,15,3,65,47,0.7231,0,0.0,create;one;away;done;was;stand;flesh;sand;front;away;preferred;clay,0.0833,32
+174,"I have no life but this,",177,9,2,35,29,0.8286,0,0.0,this;here;lest;there;come;new;extent;you,0.0,13
+175,Your riches taught me poverty.,941,39,8,179,114,0.6369,0,0.0,poverty;millionnaire;boast;ayre;dominions;peru;poverty;you;myself;gems;commonest;diadems;queen;know;wealth;so;day;you;blame;jew;golconda;deem;day;gem;know;gold;time;behold;surmise;pearl;through;school,0.125,86
+176,THE CONTRACT.,449,20,4,79,64,0.8101,0,0.0,him;pay;life;way;disappoint;prove;suspect;love;vision;buy;spice;lie;risk;gain;owe;noon,0.0,45
+177,THE LETTER.,954,27,3,185,108,0.5838,1,0.0054,him;write;syntax;out;hurried;slow;pages;so;writer;toiled;you;child;so;there;it;silenter;finished;';ended;say;cautious;hid;letter;head,0.0417,84
+178,The way I read a letter 's this:,475,19,4,93,64,0.6882,0,0.0,this;door;next;sure;off;knock;forth;lock;wall;floor;mouse;before;am;know;not;bestow,0.0,43
+179,Wild nights! Wild nights!,228,14,3,42,28,0.6667,1,0.0238,nights;thee;be;luxury;winds;port;compass;chart;eden;sea;moor;thee,0.0833,23
+180,AT HOME.,570,25,5,105,81,0.7714,1,0.0095,scant;star;met;fear;bush;leaves;up;eaves;abroad;feet;heard;street;fast;fire;draw;poor;task;she;opposite;thee,0.0,61
+181,POSSESSION.,207,10,2,39,25,0.641,0,0.0,girdle;bee;hallow;formerly;persuaded;pearl;eden;earl,0.0,21
+182,A charm invests a face,210,9,2,36,32,0.8889,0,0.0,face;beheld;veil;dispelled;mesh;denies;want;satisfies,0.0,22
+183,THE LOVERS.,477,20,4,84,59,0.7024,0,0.0,cheek;fell;men;pitiful;work;go;maid;know;cheek;rose;speech;goes;danced;tune;clocks;one,0.0625,52
+184,"In lands I never saw, they say,",237,9,2,42,36,0.8571,0,0.0,say;down;firmament;town;feet;play;i;day,0.0,26
+185,"The moon is distant from the sea,",342,14,3,65,48,0.7385,0,0.0,sea;hands;boy;sands;degree;eye;town;away;hand;sea;command;me,0.0833,38
+186,"He put the belt around my life, â",458,17,2,84,65,0.7738,1,0.0119,life;snap;imperial;up;do;deed;sort;cloud;call;toils;rest;smiles;mine;in;not;decline,0.0,45
+187,THE LOST JEWEL.,216,10,2,45,35,0.7778,0,0.0,fingers;sleep;prosy;keep;fingers;gone;remembrance;own,0.125,21
+188,What if I say I shall not wait?,383,15,3,74,60,0.8108,0,0.0,wait;gate;thee;off;enough;liberty;more;implore;me;ago;show;yesterday;nature,0.0,35
+189,MOTHER NATURE.,635,30,6,103,80,0.7767,0,0.0,mother;child;waywardest;mild;hill;heard;squirrel;bird;conversation;afternoon;assembly;down;aisles;prayer;cricket;flower;sleep;away;lamps;sky;affection;care;lip;everywhere,0.0,56
+190,OUT OF THE MORNING.,388,15,3,74,51,0.6892,1,0.0135,morning;day;mountains;they;lilies;bird;countries;heard;sailor;skies;pilgrim;lies,0.0,34
+191,At half-past three a single bird,319,14,3,48,39,0.8125,3,0.0625,bird;sky;term;melody;experiment;test;principle;rest;element;seen;was;between,0.0,27
+192,DAY'S PARLOR.,514,20,4,90,67,0.7444,0,0.0,o'clock;hills;light;spills;east;fold;night;unrolled;took;rows;prince;those;jew;stay;place;day,0.0,53
+193,THE SUN'S WOOING.,472,20,4,73,57,0.7808,0,0.0,morning;thing;dwell;spring;supremer;thing;holiday;king;orchards;hems;necessity;diadems;staggered;crown;forehead;one,0.0625,44
+194,THE ROBIN.,309,15,3,55,35,0.6364,0,0.0,one;morn;reports;on;one;noon;quantity;begun;one;nest;certainty;best,0.1667,26
+195,THE BUTTERFLY'S DAY.,696,30,6,110,82,0.7455,0,0.0,butterfly;door;afternoon;everywhere;trace;abroad;enterprise;understood;seen;field;hard;cloud;herself;go;circumference;show;worked;blew;idleness;sky;tide;hay;butterfly;sea,0.0417,65
+196,THE BLUEBIRD.,396,18,2,68,51,0.75,1,0.0147,spring;surmise;suddenness;skies;hues;worn;habiliments;brown;song;choose;interval;goes;tree;leaf;nobody;self,0.0,35
+197,APRIL.,496,17,1,90,67,0.7444,1,0.0111,hills;fills;dawn;lawn;foot;slope;pane;again;chanticleer;everywhere;woods;roads;tell;well;mystery;reply,0.0,48
+198,THE SLEEPING FLOWERS.,811,35,7,152,96,0.6316,2,0.0132,asked;lie;smiled;reply;said;again;beds;plain;shortest;on;first;leontodon;aster;bell;red;daffodil;cradles;plied;lullaby;child;wakens;lids;crimson;woods;reverent;said;them;red,0.0714,92
+199,MY ROSE.,469,18,1,85,71,0.8353,1,0.0118,astray;vevay;day;coterie;fold;emerald;cheek;meek;ambuscade;displayed;maid;grace;face;her;exeter;me;bee,0.0,51
+200,THE ORIOLE'S SECRET.,326,20,5,71,47,0.662,0,0.0,sing;thing;divine;bird;unheard;crowd;ear;hear;fair;rune;none;within;tree;me;thee,0.0,32
+201,THE ORIOLE.,713,35,7,125,90,0.72,1,0.008,touched;all;prodigal;oriole;it;divine;him;mine;dissembler;thief;oratorio;chief;orchards;enchants;attar;wants;burmah;birds;pageant;bards;sought;fleece;man;peace;jason;me;emolument;tree,0.0,62
+202,IN SHADOW.,841,35,7,164,109,0.6646,0,0.0,so;now;grown;though;live;by;woods;me;daffodils;gown;fashion;own;hurry;see;one;me;come;away;go;me;failed;away;me;calvary;goes;plumes;acknowledgment;drums,0.1429,78
+203,THE HUMMING-BIRD.,207,9,1,36,30,0.8333,0,0.0,evanescence;wheel;emerald;cochineal;bush;head;probably;ride,0.0,21
+204,SECRETS.,474,20,4,89,60,0.6742,1,0.0112,secret;hills;orchards;daffodils;way;whole;bird;tell;however;know;axiom;snow;father;could;do;world,0.0,44
+205,"Who robbed the woods,",242,9,1,39,29,0.7436,1,0.0256,woods;woods;trees;mosses;please;curious;away;hemlock;say,0.1111,20
+206,TWO VOYAGERS.,342,15,3,62,51,0.8226,0,0.0,noon;stream;firmament;beam;away;sea;port;be;bird;sea;merchantman;me,0.0833,32
+207,BY THE SEA.,665,30,6,132,80,0.6061,0,0.0,dog;sea;basement;me;floor;hands;mouse;sands;tide;shoe;belt;too;up;dew;sleeve;too;behind;heel;shoes;pearl;town;know;look;withdrew,0.0417,67
+208,OLD-FASHIONED.,838,35,7,151,105,0.6954,3,0.0199,name;star;science;interfere;woods;glass;breath;class;butterfly;hat;cabinets;forgot;now;go;done;too;about;heads;worst;betides;changed;there;come;stare;skies;girl;everything;pearl,0.0,74
+209,A TEMPEST.,389,15,3,71,53,0.7465,0,0.0,air;few;cloak;view;roofs;air;teeth;hair;arose;eyes;coast;paradise,0.0833,40
+210,THE SEA.,92,5,1,17,16,0.9412,0,0.0,silver;sand;effacing;land,0.0,9
+211,IN THE GARDEN.,573,25,5,106,80,0.7547,1,0.0094,walk;saw;halves;raw;dew;grass;wall;pass;eyes;abroad;thought;head;cautious;crumb;feathers;home;ocean;seam;noon;swim,0.0,55
+212,THE SNAKE.,649,30,6,121,87,0.719,1,0.0083,grass;rides;not;is;comb;seen;feet;on;acre;corn;barefoot;morn;lash;sun;it;gone;people;me;transport;cordiality;fellow;alone;breathing;bone,0.0,55
+213,THE MUSHROOM.,532,25,5,102,69,0.6765,0,0.0,plants;not;hut;spot;always;career;delay;tare;juggler;alibi;antedate;hie;pleased;intermit;scion;circumspect;face;contemn;iscariot;him,0.0,52
+214,THE STORM.,470,18,1,89,68,0.764,0,0.0,bugle;grass;heat;pass;doors;ghost;moccason;passed;trees;away;ran;day;wild;whirled;come;go;world,0.0,50
+215,THE SPIDER.,175,10,1,32,26,0.8125,0,0.0,night;light;white;dame;gnome;inform;immortality;strategy;physiognomy,0.0,16
+216,I know a place where summer strives,367,14,3,67,54,0.806,0,0.0,strives;frost;back;lost;pools;lanes;vow;refrains;adamant;dew;quartz;shoe,0.0,36
+217,The one that could repeat the summer day,285,9,1,49,41,0.8367,0,0.0,day;he;be;sun;down;mean;outgrown;unknown;remain,0.0,25
+218,THE WIND'S VISIT.,543,25,5,101,71,0.703,1,0.0099,man;in;then;within;guest;chair;hand;air;him;push;once;bush;billow;pass;tunes;glass;flitting;man;flurriedly;alone,0.05,53
+219,Nature rarer uses yellow,215,9,2,34,29,0.8529,0,0.0,yellow;hue;sunsets;blue;woman;affords;selectly;words,0.0,22
+220,GOSSIP.,209,10,2,26,23,0.8846,0,0.0,interchange;confidence;of;inference;cases;secrecy;compact;notoriety,0.0,18
+221,SIMPLICITY.,283,11,1,47,41,0.8723,0,0.0,stone;alone;careers;fears;brown;on;sun;alone;decree;simplicity,0.1,29
+222,STORM.,277,10,2,55,40,0.7273,0,0.0,running;still;window;feel;covert;there;apron;air,0.0,24
+223,THE RAT.,231,15,3,38,36,0.9474,0,0.0,tenant;rent;obligation;intent;wit;circumvent;harm;reticent;decree;him;as;equilibrium,0.0,22
+224,"Frequently the woods are pink,",285,14,3,52,43,0.8269,0,0.0,pink;brown;undress;town;crested;see;cranny;be;me;turned;rotation;performed,0.0,27
+225,A THUNDER-STORM.,621,25,5,115,83,0.7217,0,0.0,grass;low;earth;sky;trees;abroad;hands;road;streets;slow;beak;claw;nests;barns;rain;hands;hold;sky;house;tree,0.1,62
+226,WITH FLOWERS.,165,10,2,24,23,0.9583,0,0.0,them;come;hesitate;gone;pause;cashmere;plucking;here,0.0,16
+227,SUNSET.,114,5,1,19,18,0.9474,0,0.0,toss;daffodil;mingle;still,0.0,11
+228,"She sweeps with many-colored brooms,",384,14,3,67,48,0.7164,1,0.0149,brooms;behind;west;pond;in;thread;east;emerald;brooms;fly;stars;away,0.0833,38
+229,Like mighty footlights burned the red,230,9,2,38,33,0.8684,0,0.0,red;trees;day;these;applaud;crowd;dress;god,0.0,21
+230,PROBLEMS.,769,28,4,139,96,0.6906,0,0.0,cup;up;dew;leaps;sleeps;blue;be;ecstasy;boughs;makes;partakes;dews;piers;spheres;blue;stalactite;night;due;house;close;see;day;away;pomposity,0.0417,81
+231,THE JUGGLER OF DAY.,294,10,2,55,40,0.7273,0,0.0,purple;sky;horizon;die;window;barn;meadow;gone,0.0,30
+232,MY CRICKET.,400,20,4,65,56,0.8615,0,0.0,birds;grass;celebrates;mass;seen;grace;becomes;loneliness;noon;low;canticle;typify;grace;glow;difference;now,0.0625,41
+233,As imperceptibly as grief,429,19,4,69,58,0.8406,0,0.0,grief;away;last;perfidy;distilled;begun;herself;afternoon;in;shone;grace;gone;wing;keel;escape;beautiful,0.0,42
+234,"It can't be summer, â that got through;",271,9,2,52,40,0.7692,0,0.0,through;spring;cross;sing;rouge;white;down;chrysolite,0.0,29
+235,SUMMER'S OBSEQUIES.,485,24,5,90,66,0.7333,0,0.0,fringes;red;blossoms;parade;illness;prepare;morning;are;procession;there;us;prayer;willing;be;seraph;thee;bee;butterfly;amen,0.0,44
+236,FRINGED GENTIAN.,334,13,1,62,48,0.7742,0,0.0,gentian;rose;laughed;snows;creature;hill;forehead;still;condition;come;it;bloom,0.0,31
+237,NOVEMBER.,445,20,4,79,59,0.7468,1,0.0127,sing;days;snow;haze;mornings;eyes;rod;sheaves;brook;valves;touch;elves;remain;share;mind;bear,0.0,47
+238,THE SNOW.,559,25,5,102,76,0.7451,0,0.0,sieves;wood;wool;road;face;plain;east;again;fence;rail;fleeces;veil;stem;room;were;them;posts;queen;ghosts;been,0.0,52
+239,THE BLUE JAY.,654,32,7,111,87,0.7838,0,0.0,year;jay;too;felicity;us;day;universe;away;intimate;play;all;severity;due;sky;nutriment;temerity;head;evergreens;militant;things;tonic;dispute;immortality;out;eternity,0.0,63
+240,"Let down the bars, O Death!",224,9,2,41,33,0.8049,0,0.0,death;in;repeat;done;night;fold;thee;told,0.0,26
+241,Going to heaven!,728,30,4,155,98,0.6323,0,0.0,heaven;when;how;astonished;you;heaven;sounds;done;night;arm;too;knows;first;me;lost;me;crown;dress;home;it;breath;more;earth;it;found;afternoon;ground,0.1111,73
+242,"At least to pray is left, is left.",239,9,2,46,36,0.7826,0,0.0,left;air;is;everywhere;south;sea;nazareth;me,0.0,25
+243,EPITAPH.,237,10,2,43,36,0.8372,0,0.0,spot;grows;breast;enclose;told;dwell;export;syllable,0.0,25
+244,Morns like these we parted;,299,14,3,53,45,0.8491,0,0.0,parted;rose;firmer;repose;it;me;transport;agony;nearing;drew;rustling;flew,0.0,28
+245,A death-blow is a life-blow to some,145,4,1,25,18,0.72,2,0.08,some;become;when;begun,0.0,9
+246,"I read my sentence steadily,",443,19,4,84,63,0.75,0,0.0,steadily;eyes;mistake;clause;shame;form;soul;him;familiar;extremity;be;agony;acquainted;friends;hint;ends,0.0,39
+247,"I have not told my garden yet,",450,19,4,91,57,0.6264,1,0.011,yet;me;now;bee;street;i;ignorant;die;it;so;forests;go;table;way;riddle;day,0.0,37
+248,THE BATTLE-FIELD.,273,10,2,45,37,0.8222,0,0.0,stars;rose;june;goes;grass;place;list;face,0.0,28
+249,The only ghost I ever saw,453,17,2,79,60,0.7595,0,0.0,saw;so;foot;snow;bird;roe;mosaic;mistletoe;seldom;breeze;dimples;trees;transient;shy;behind;day,0.0,45
+250,"Some, too fragile for winter winds,",398,14,3,66,55,0.8333,0,0.0,winds;encloses;frost;cold;nest;exposes;look;bold;children;cold;father;fold,0.0833,35
+251,"As by the dead we love to sit,",213,9,2,40,32,0.8,0,0.0,sit;dear;grapple;here;mathematics;prize;ratio;eyes,0.0,19
+252,MEMORIALS.,568,25,5,98,79,0.8061,0,0.0,significant;by;creature;tenderly;workmanships;wool;did;until;heavy;themselves;dust;shelves;gave;there;him;are;not;tears;etchings;repairs,0.0,51
+253,"I went to heaven, â",287,16,1,52,46,0.8846,0,0.0,heaven;town;ruby;down;fields;dew;pictures;drew;moth;frames;gossamer;names;contented;be;unique;society,0.0,31
+254,"Their height in heaven comforts not,",453,19,4,85,64,0.7529,0,0.0,not;me;was;see;supposition;frontier;perhaps;insecure;me;size;until;eyes;values;show;evidence;know,0.0625,45
+255,There is a shame of nobleness,234,9,2,41,32,0.7805,0,0.0,nobleness;pelf;ecstasy;itself;feels;brave;told;grave,0.0,23
+256,TRIUMPH.,459,20,4,79,58,0.7342,0,0.0,kinds;room;death;overcome;mind;long;supreme;throng;bribe;back;renounced;rack;himself;pass;bar;countenance,0.0,49
+257,Pompless no life can pass away;,231,8,1,38,33,0.8684,0,0.0,away;career;way;here;mystery;pall;spaciously;all,0.0,19
+258,"I noticed people disappeared,",234,9,2,38,27,0.7105,0,0.0,disappeared;child;remote;wild;visited;wild;fact;child,0.25,21
+259,FOLLOWING.,579,25,5,109,76,0.6972,1,0.0092,awake;sleep;took;up;clear;by;sleep;me;once;them;arose;same;peace;sigh;divorced;day;gown;prayer;need;there,0.05,46
+260,"If anybody's friend be dead,",729,29,6,138,93,0.6739,0,0.0,dead;theme;alive;time;sunday;hair;them;sepulchre;day;date;now;that;said;smile;frost;tell;tea;few;thing;you;invitations;vow;estimate;woe,0.0,60
+261,THE JOURNEY.,319,15,3,58,48,0.8276,0,0.0,advanced;come;road;term;awe;led;between;dead;hope;route;before;gate,0.0,33
+262,A COUNTRY BURIAL.,196,10,2,35,29,0.8286,0,0.0,bed;awe;break;fair;straight;round;noise;ground,0.0,23
+263,GOING.,678,30,6,124,76,0.6129,0,0.0,night;care;figure;chair;quiet;know;figure;fro;dawn;sigh;figure;lie;it;below;orchard;do;plump;knoll;thread;school;nuts;small;charged;goal,0.0833,66
+264,Essential oils are wrung:,216,9,2,40,32,0.8,0,0.0,wrung;rose;alone;screws;decays;drawer;lies;rosemary,0.0,22
+265,I lived on dread; to those who know,224,9,2,43,37,0.8605,1,0.0233,know;is;impetus;less;soul;where;aid;despair,0.0,20
+266,"If I should die,",479,18,1,86,65,0.7558,0,0.0,die;live;on;beam;burn;done;early;go;option;below;stand;lie;continue;fly;tranquil;serene;sprightly;scene,0.0,44
+267,AT LENGTH.,434,20,4,72,54,0.75,1,0.0139,it;not;industriousness;thought;life;within;up;plain;blindness;see;post;stupidity;dullness;lay;finishing;we,0.0,32
+268,GHOSTS.,531,25,5,87,65,0.7471,0,0.0,haunted;house;surpassing;place;meeting;ghost;confronting;host;gallop;achase;encounter;place;concealed;most;apartment;least;revolver;door;spectre;near,0.05,55
+269,VANISHED.,234,10,2,45,34,0.7556,0,0.0,died;done;wardrobe;sun;gate;spied;her;side,0.0,23
+270,PRECEDENCE.,451,20,4,82,58,0.7073,0,0.0,death;brow;footman;now;robes;dressed;preferment;rest;courtier;wait;retinue;state;hat;clay;lords;unblushingly,0.0,51
+271,GONE.,623,26,2,109,85,0.7798,0,0.0,evening;well;bravos;tell;village;repose;chapel;rose;returning;time;propitious;him;roses;bouquet;species;day;wonder;drew;moorings;grew;vision;new;daisy;knew,0.0,60
+272,REQUIEM.,331,15,3,57,44,0.7719,1,0.0175,morning;day;banners;away;playmates;school;eden;full;even;star;kingdoms;are,0.0,33
+273,What inn is this,229,10,1,38,29,0.7632,0,0.0,this;night;comes;landlord;maids;rooms;hearth;flow;landlord;below,0.1,18
+274,"It was not death, for I stood up,",729,29,6,137,95,0.6934,0,0.0,up;down;bells;noon;flesh;crawl;feet;cool;all;seen;burial;mine;shaven;frame;key;some;stopped;around;morns;ground;cool;spar;land;despair,0.0417,68
+275,TILL THE END.,583,20,4,107,68,0.6355,0,0.0,friend;die;late;me;eyes;see;until;me;faith;come;sleep;name;before;then;sun;lain,0.0625,52
+276,VOID.,235,10,2,42,34,0.8095,0,0.0,away;pause;dissent;laws;night;called;here;exhaled,0.0,22
+277,A throe upon the features,202,9,2,36,31,0.8611,0,0.0,features;breath;parting;death;mention;grown;given;own,0.0,19
+278,SAVED!,459,20,4,79,67,0.8481,0,0.0,they;white;rank;designate;ones;times;snow;palms;unknown;soil;anguish;mile;gained;road;house;saved,0.0,42
+279,I think just how my shape will rise,510,19,4,95,70,0.7368,0,0.0,rise;forgiven;head;heaven;weigh;prayer;me;care;sent;away;broke;they;borne;forgiven;trust;unshriven,0.0625,45
+280,THE FORGOTTEN GRAVE.,292,15,3,45,40,0.8889,0,0.0,years;place;there;peace;ranged;spelled;orthography;dead;fields;way;key;memory,0.0,29
+281,POEMS,1690,29,11,278,163,0.5863,2,0.0072,dickinson;series;by;todd;day;beside;fields;wide;forget;tell;bees;dwell;preface;lines;flowers;spirit;t;october;life,0.0,143
+282,REAL RICHES.,234,10,2,44,35,0.7955,0,0.0,pearls;sea;emperor;me;mines;see;dome;me,0.125,21
+283,SUPERIORITY TO FATE.,204,10,2,34,29,0.8529,0,0.0,fate;learn;any;earn;time;surprise;economy;paradise,0.0,17
+284,HOPE.,220,10,2,36,30,0.8333,0,0.0,glutton;fair;closely;there;table;one;consumed;remain,0.0,19
+285,FORBIDDEN FRUIT.,0,0,0,0,0,0.0,0,0.0,,0.0,0
+286,Forbidden fruit a flavor has,120,4,1,20,18,0.9,0,0.0,has;mocks;within;locks,0.0,13
+287,FORBIDDEN FRUIT.,0,0,0,0,0,0.0,0,0.0,,0.0,0
+288,Heaven is what I cannot reach!,241,9,2,42,32,0.7619,0,0.0,reach;tree;hang;me;cloud;ground;behind;found,0.0,20
+289,A WORD.,87,7,1,19,16,0.8421,0,0.0,dead;said;say;just;live;day,0.0,8
+290,To venerate the simple days,279,12,2,50,37,0.74,0,0.0,days;by;remember;me;trifle;mortality;air;remember;there;forests;air,0.1818,23
+291,LIFE'S TRADES.,124,5,1,27,23,0.8519,0,0.0,weep;sigh;these;die,0.0,13
+292,Drowning is not so pitiful,344,12,1,62,52,0.8387,0,0.0,pitiful;rise;man;skies;forever;abode;company;god;visage;see;it;adversity,0.0,34
+293,"How still the bells in steeples stand,",124,4,1,21,19,0.9048,0,0.0,stand;sky;feet;melody,0.0,13
+294,"If the foolish call them 'flowers,'",580,24,5,93,71,0.7634,0,0.0,';tell;them;well;revelations;criticise;edition;eyes;moses;denied;landscape;side;superfluous;sciences;angels;skies;lettres;stand;galaxies;hand',0.0,55
+295,A SYLLABLE.,113,5,1,17,16,0.9412,0,0.0,divine;freight;syllable;weight,0.0,12
+296,PARTING.,238,10,2,44,37,0.8409,0,0.0,close;see;unveil;me;conceive;befell;heaven;hell,0.0,21
+297,ASPIRATION.,238,10,2,47,35,0.7447,0,0.0,are;rise;plan;skies;recite;thing;warp;king,0.0,20
+298,THE INEVITABLE.,347,13,1,65,42,0.6462,0,0.0,came;fear;long;dear;dismay;despair;due;here;utmost;new;it;through,0.0,27
+299,A BOOK.,227,9,1,41,34,0.8293,0,0.0,book;away;page;poetry;take;toll;chariot;soul,0.0,24
+300,Who has not found the heaven below,119,4,1,23,22,0.9565,0,0.0,below;above;mine;love,0.0,10
+301,A PORTRAIT.,198,7,1,33,27,0.8182,0,0.0,grace;face;stone;ease;acquaintances;thrown,0.0,20
+302,I HAD A GUINEA GOLDEN.,1228,45,5,224,134,0.5982,1,0.0045,golden;sand;simple;land;value;eye;it;sigh;robin;day;painted;away;robins;same;troubadour;';heaven;name;heeding;same;crowded;ashine;it;mine;moral;friend;robin;sand;ditty;tear;traitor;here;solemn;mind;consolation;find;a;was;dainty;delinquencies,0.1,102
+303,SATURDAY AFTERNOON.,245,10,2,44,38,0.8636,0,0.0,girls;leap;afternoon;keep;air;bliss;wait;this,0.0,23
+304,"Few get enough, â enough is one;",120,4,1,21,18,0.8571,0,0.0,one;throng;right;belong,0.0,11
+305,"Upon the gallows hung a wretch,",248,8,1,50,42,0.84,0,0.0,wretch;hell;him;fell;in;son;gasped;boon,0.0,25
+306,THE LOST THOUGHT.,253,10,2,49,40,0.8163,0,0.0,mind;split;seam;fit;join;before;reach;floor,0.0,25
+307,RETICENCE.,327,15,3,52,45,0.8654,0,0.0,keeps;plan;pink;man;tale;her;survive;listener;lips;be;keep;immortality,0.0,31
+308,WITH FLOWERS.,231,9,1,37,25,0.6757,1,0.027,forgetting;not;recollecting;forgot;merry;gay;fingers;day,0.0,14
+309,The farthest thunder that I heard,586,20,1,98,72,0.7347,0,0.0,heard;sky;noons;by;it;myself;bolt;life;oxygen;repay;obligation;electricity;days;bright;concomitant;light;flake;sound;reverberation;found,0.0,50
+310,On the bleakness of my lot,216,9,2,40,35,0.875,0,0.0,lot;raise;rock;maize;tilled;hand;sun;sand,0.0,23
+311,CONTRAST.,258,10,2,43,31,0.7209,0,0.0,street;by;disclosed;company;i;by;most;misery,0.125,22
+312,FRIENDS.,136,8,2,24,21,0.875,0,0.0,pain;remain;good;stay;away;sad,0.0,14
+313,FIRE.,237,10,2,36,31,0.8611,0,0.0,was;pile;sake;awhile;light;consolidates;disclose;carbonates,0.0,20
+314,A MAN.,273,10,2,46,34,0.7391,0,0.0,drop;fall;stakes;all;advance;done;her;man,0.0,19
+315,VENTURES.,156,5,1,25,22,0.88,0,0.0,venture;shore;creature;nevermore,0.0,16
+316,GRIEFS.,1125,45,9,207,127,0.6135,0,0.0,meet;eyes;mine;size;long;begin;mine;pain;live;try;between;die;piled;cause;lapse;pause;still;above;pain;love;told;lies;once;eyes;cold;';eyes;air;kind;me;affords;calvary;cross;alone;presume;own,0.1111,101
+317,I have a king who does not speak;,565,20,3,114,77,0.6754,1,0.0088,speak;meek;away;sleep;peep;day;comes;drums;roll;sky;'victory';soul;bird;heard;pray;day;way;perjury,0.0556,55
+318,DISENCHANTMENT.,239,10,2,44,38,0.8636,0,0.0,regard;ground;stones;mind;less;myself;wares;shelf,0.0,23
+319,LOST FAITH.,214,10,2,35,30,0.8571,0,0.0,surpasses;estate;be;cannot;life;be;clause;beggary,0.125,18
+320,LOST JOY.,234,10,2,40,31,0.775,0,0.0,bliss;viewed;stir;pursued;crag;sight;scope;right,0.0,23
+321,"I worked for chaff, and earning wheat",256,9,2,41,34,0.8293,0,0.0,wheat;betrayed;arbitrate;ratified;chaff;friend;viewed;hand,0.0,23
+322,"Life, and Death, and Giants",186,7,1,32,30,0.9375,0,0.0,giants;still;mill;candle;fame;accident;proclaim,0.0,17
+323,ALPINE GLOW.,253,12,2,40,34,0.85,0,0.0,swiss;cool;afternoon;curtains;on;side;between;alps;alps;intervene,0.1,23
+324,REMEMBRANCE.,232,10,2,40,34,0.85,0,0.0,front;house;also;mouse;cellar;hewed;fathoms;pursued,0.0,20
+325,"To hang our head ostensibly,",225,9,2,39,33,0.8462,0,0.0,ostensibly;find;posture;mind;presumption;fuzz;attitudes;gauze,0.0,19
+326,THE BRAIN.,386,15,3,72,42,0.5833,0,0.0,sky;side;include;beside;sea;blue;absorb;do;god;pound;do;sound,0.0833,29
+327,The bone that has no marrow;,321,14,3,53,41,0.7736,0,0.0,marrow;that;table;cat;obligations;same;assembly;shame;creatures;obtain;phantom;again,0.0,25
+328,THE PAST.,198,10,2,36,31,0.8611,0,0.0,creature;face;us;disgrace;her;fly;ammunition;reply,0.0,19
+329,To help our bleaker parts,121,4,1,21,20,0.9524,0,0.0,parts;given;earth;heaven,0.0,11
+330,"What soft, cherubic creatures",316,14,3,50,40,0.8,0,0.0,creatures;are;plush;star;convictions;refined;nature;ashamed;glory;degree;lady;thee,0.0,31
+331,DESIRE.,239,10,2,35,34,0.9714,0,0.0,joy;unknown;abstemiousness;wine;ungrasped;goal;reality;soul,0.0,25
+332,PHILOSOPHY.,103,5,1,19,18,0.9474,0,0.0,easier;sight;peninsula;delight,0.0,10
+333,POWER.,234,10,2,46,32,0.6957,0,0.0,out;ignite;fan;night;flood;drawer;out;floor,0.125,20
+334,"A modest lot, a fame petite,",200,6,1,36,28,0.7778,0,0.0,petite;sweet;enough;shore;more;life,0.0,22
+335,"Is bliss, then, such abyss",246,13,3,53,41,0.7736,0,0.0,abyss;amiss;shoe;foot;boot;pair;possible;fair;once;lost;more,0.0,27
+336,EXPERIENCE.,230,10,2,42,34,0.8095,0,0.0,plank;cautiously;felt;sea;next;inch;gait;experience,0.0,20
+337,THANKSGIVING DAY.,440,20,4,72,60,0.8333,0,0.0,series;day;table;memory;pussy;play;thinking;holiday;subtraction;sum;caption;room;pebble;bay;assembly;day,0.0625,39
+338,CHILDISH GRIEFS.,255,12,3,40,33,0.825,0,0.0,plush;appears;citadel;years;griefs;despair;realm;repair;love,0.0,27
+339,CONSECRATION.,198,5,1,38,28,0.7368,0,0.0,it;thee;it;humility,0.25,23
+340,LOVE'S HUMILITY.,333,15,3,54,44,0.8148,0,0.0,doubt;fear;qualities;appear;prove;need;apprehension;creed;abode;content;church;sacrament,0.0,28
+341,LOVE.,101,5,1,16,14,0.875,0,0.0,life;death;and;breath,0.0,9
+342,SATISFIED.,603,25,5,99,76,0.7677,1,0.0101,rest;eyes;satisfied;size;dream;prayer;bliss;despair;cold;become;soul;sum;above;hue;full;too;disburse;defer;bowls;more,0.0,51
+343,WITH A FLOWER.,241,10,2,40,36,0.9,1,0.025,dear;done;flight;sun;gather;day;auburn;pray,0.0,24
+344,SONG.,240,10,2,42,34,0.8095,0,0.0,be;flown;whippoorwill;done;tomb;o'er;anemone;forevermore,0.0,27
+345,LOYALTY.,323,10,2,56,44,0.7857,0,0.0,music;rolled;morning;old;patent;you;thomas;true,0.0,32
+346,"To lose thee, sweeter than to gain",245,9,2,45,35,0.7778,0,0.0,gain;knew;destitute;dew;sand;sea;perquisite;be,0.0,21
+347,Poor little heart!,329,15,4,52,29,0.5577,0,0.0,heart;thee;care;heart;thee;debonair;heart;thee;me;heart;glory;be,0.4167,38
+348,FORGOTTEN.,460,21,3,76,59,0.7763,0,0.0,word;sword;man;syllables;again;fell;tell;day;brother;away;sun;day;onset;victory;marksman;shot;target;'forgot',0.0556,42
+349,I've got an arrow here;,196,8,2,39,33,0.8462,0,0.0,here;it;revere;'skirmish';know;arrow;bow,0.0,21
+350,THE MASTER.,369,15,3,59,49,0.8305,0,0.0,spirit;keys;on;degrees;substance;blow;heard;slow;straighten;cool;thunderbolt;soul,0.0,32
+351,"Heart, we will forget him!",236,9,2,43,30,0.6977,1,0.0233,him;night;gave;light;me;dim;lagging;him,0.125,20
+352,"Father, I bring thee not myself, â",257,9,2,47,36,0.766,0,0.0,myself;load;heart;hold;own;grew;went;you,0.0,23
+353,We outgrow love like other things,129,4,1,22,20,0.9091,0,0.0,things;drawer;shows;wore,0.0,14
+354,"Not with a club the heart is broken,",300,14,3,57,44,0.7719,0,0.0,broken;stone;it;known;creature;fell;noble;tell;bird;descried;stone;died,0.0833,29
+355,WHO?,166,8,1,29,20,0.6897,0,0.0,bird;flies;be;dies;bee;friend;me,0.0,16
+356,"He touched me, so I live to know",372,13,2,70,54,0.7714,0,0.0,know;so;breast;me;sea;rest;before;air;gown;so;now;renown,0.0833,32
+357,DREAMS.,115,5,1,22,21,0.9545,0,0.0,dream;stain;night;again,0.0,10
+358,NUMEN LUMEN.,456,20,4,79,62,0.7848,1,0.0127,face;away;sundown;privacy;mine;he;invisible;me;voice;day;certainty;immortality;way;day;endless;may,0.0625,40
+359,LONGING.,673,30,6,118,81,0.6864,0,0.0,rides;wheels;convey;hills;journey;see;utterly;me;sparrows;eaves;pane;leaves;window;be;pizarro;me;him;ring;abroad;bring;blossom;bee;night;me,0.0833,66
+360,WEDDED.,240,12,3,44,38,0.8636,0,0.0,said;be;fit;mystery;life;well;back;until;nature,0.0,23
+361,NATURE'S CHANGES.,491,20,4,79,64,0.8101,1,0.0127,landscape;bouquet;parian;day;year;hang;tune;sang;bog;hill;set;frill;miracle;gown;symbols;done,0.0,49
+362,THE TULIP.,143,7,1,25,23,0.92,0,0.0,tree;me;mute;foot;suit;see,0.0,13
+363,A light exists in spring,525,24,5,89,71,0.7978,0,0.0,spring;year;period;here;abroad;hills;overtake;feels;lawn;tree;know;me;step;away;sound;stay;loss;content;encroached;sacrament,0.0,49
+364,THE WAKING YEAR.,486,20,4,80,61,0.7625,0,0.0,hill;keeps;field;sleeps;brooms;tree;housewives;be;suspect;smile;bird;while;stands;wood;resurrection;odd,0.0,45
+365,TO MARCH.,747,32,3,149,95,0.6376,0,0.0,in;am;before;hat;walked;are;you;rest;well;me;tell;birds';knew;declare;grew;me;hills;hue;suitable;you;april;door;pursued;call;occupied;trivial;come;praise;blame,0.069,64
+366,MARCH.,350,13,1,65,51,0.7846,1,0.0154,purple;high;peddler;dry;coming;spot;mighty;hot;others;die;buccaneering;sky,0.0,33
+367,DAWN.,118,5,1,23,20,0.8696,0,0.0,come;door;bird;shore,0.0,12
+368,"A murmur in the trees to note,",618,24,5,118,82,0.6949,0,0.0,note;wind;seek;find;lawn;feet;us;sweet;men;unperceived;tell;believed;bed;espy;wings;try;tell;word;mine;road,0.05,61
+369,"Morning is the place for dew,",112,4,1,20,17,0.85,0,0.0,dew;noon;flowers;sun,0.0,12
+370,To my quick ear the leaves conferred;,237,9,2,43,36,0.8372,0,0.0,conferred;bells;privacy;sentinels;hide;tell;crack;visible,0.0,24
+371,A ROSE.,144,7,1,32,24,0.75,0,0.0,thorn;morn;two;breeze;trees;rose,0.0,17
+372,High from the earth I heard a bird;,531,20,1,88,65,0.7386,1,0.0114,bird;trees;trifles;breeze;softly;wind;perturbation;behind;fellow;talk;benediction;partook;burden;wood;father;brood;transport;care;respites;are,0.0,43
+373,COBWEBS.,215,10,2,35,33,0.9429,0,0.0,artist;employed;merit;certified;bridget;land;genius;hand,0.0,21
+374,A WELL.,614,25,5,112,81,0.7232,0,0.0,well;far;world;jar;afraid;he;bold;me;be;sea;fear;he;yet;most;house;ghost;not;regret;less;get,0.05,54
+375,"To make a prairie it takes a clover and one bee, â",129,5,1,27,19,0.7037,0,0.0,bee;bee;revery;do;few,0.2,13
+376,THE WIND.,283,15,3,46,27,0.587,0,0.0,light;delight;bee;melody;woods;breeze;stirs;trees;morning;done;clocks;noon,0.0,31
+377,A dew sufficed itself,308,14,3,56,42,0.75,0,0.0,itself;leaf;destiny;';work;play;seen;physiognomy;abducted;sun;passing;unknown,0.0,29
+378,THE WOODPECKER.,110,5,1,21,18,0.8571,0,0.0,is;frill;tree;goal,0.0,11
+379,A SNAKE.,237,9,1,43,35,0.814,0,0.0,secrets;snake;houses;take;gallop;knows;treason;goes,0.0,20
+380,"Could I but ride indefinite,",511,21,4,95,69,0.7263,1,0.0105,indefinite;bee;liked;me;buttercups;may;everywhere;away;follow;do;peninsulas;you;bee;air;long;bar;deem;are,0.0556,43
+381,THE MOON.,596,25,5,109,76,0.6972,0,0.0,gold;ago;face;below;blond;stone;dew;known;part;smile;bestow;will;be;star;pass;door;firmament;shoe;belt;blue,0.0,54
+382,THE BAT.,445,20,4,63,55,0.873,0,0.0,wings;article;lips;perceptible;halved;air;inscrutable;philosopher;firmament;abode;malevolence;withheld;creator;praise;me;eccentricities,0.0,39
+383,THE BALLOON.,635,25,5,110,84,0.7636,1,0.0091,you;ascend;you;diamond;out;blond;mean;renowned;eye;breath;below;death;spins;tree;veins;sea;oath;down;observe;',0.05,58
+384,EVENING.,361,15,3,67,49,0.7313,0,0.0,sang;sun;one;upon;dew;do;new;go;came;name;home;became,0.0,36
+385,COCOON.,105,6,1,20,15,0.75,0,0.0,whom;tomb;worm;gnome;catacomb,0.0,11
+386,SUNSET.,107,5,1,21,19,0.9048,0,0.0,away;sea;tar;ecstasy,0.0,13
+387,AURORA.,514,21,2,80,65,0.8125,1,0.0125,blaze;night;forms;itself;alarms;sovereign;me;spirit;majesty;attitudes;stem;oxygen;them;menagerie;show;centuries;ago;grass;know,0.0,41
+388,THE COMING OF NIGHT.,734,30,6,129,90,0.6977,0,0.0,sunset;dun;tinsel;sun;scarlet;full;flamingo;tell;billows;grass;feature;pass;village;blot;carry;spot;kennel;wood;nodding;solitude;guido;told;pencil;unfold,0.0,65
+389,AFTERMATH.,256,12,3,40,30,0.75,0,0.0,ceased;some;prophetic;come;year;done;book;june;eternity,0.0,23
+390,This world is not conclusion;,326,12,1,52,44,0.8462,0,0.0,conclusion;beyond;music;sound;baffles;know;last;go;scholars;shown;generations;known,0.0,29
+391,We learn in the retreating,178,9,2,31,26,0.8387,0,0.0,retreating;one;us;sun;departure;more;presence;before,0.0,14
+392,"They say that 'time assuages,' â",225,9,2,40,36,0.9,0,0.0,';assuage;strengthens;age;trouble;remedy;too;malady,0.0,19
+393,"We cover thee, sweet face.",343,12,1,62,46,0.7419,0,0.0,face;thee;us;flee;until;more;away;o'er;love;show;fold;now,0.0,36
+394,ENDING.,211,10,2,39,28,0.7179,0,0.0,ended;play;garrets;holiday;later;world;better;unfurled,0.0,16
+395,"The stimulus, beyond the grave",110,4,1,16,15,0.9375,0,0.0,grave;see;drams;royally,0.0,11
+396,"Given in marriage unto thee,",228,9,2,37,30,0.8108,0,0.0,thee;host;son;ghost;dissolve;decay;seal;mortality,0.0,23
+397,That such have died enables us,111,4,1,17,14,0.8235,0,0.0,us;die;certificate;immortality,0.0,8
+398,"They won't frown always, â some sweet day",269,9,2,52,43,0.8269,0,0.0,day;tease;looked;';door;child;ice;piled,0.0,24
+399,IMMORTALITY.,224,10,2,36,33,0.9167,0,0.0,thought;hat;gentlefolk;street;place;decay;orchard;away,0.0,26
+400,The distance that the dead have gone,252,9,2,43,36,0.8372,0,0.0,gone;appear;possible;year;them;suspect;become;retrospect,0.0,19
+401,"How dare the robins sing,",447,16,1,76,61,0.8026,0,0.0,sing;hear;account;year;earned;bill;do;immaterial;sun;light;immortality;night;him;hum;dew;overcome,0.0,39
+402,DEATH.,304,15,3,56,41,0.7321,0,0.0,insect;tree;it;be;balsam;knife;you;life;burrowed;skill;it;will,0.0833,26
+403,UNWARNED.,452,17,3,82,55,0.6707,0,0.0,thou;day;so;industry;alas;yet;wed;forget;alas;thee;broached;me;sweet;thee,0.1429,53
+404,Each that we lose takes part of us;,132,4,1,24,23,0.9583,0,0.0,us;abides;night;tides,0.0,13
+405,Not any higher stands the grave,239,9,2,39,30,0.7692,1,0.0256,grave;men;child;ten;lulls;queen;democrat;mien,0.0,21
+406,ASLEEP.,356,15,3,62,43,0.6935,1,0.0161,complaint;stone;revelation;bone;history;day;scarf;play;sepulchre;lies;break;butterflies,0.0,33
+407,THE SPIRIT.,349,15,3,64,50,0.7812,0,0.0,pipe;lace;fog;place;here;there;accost;air;hyperbole;be;hypothesis;tragedy,0.0,30
+408,THE MONUMENT.,258,10,2,44,36,0.8182,0,0.0,down;stone;forgot;gone;trust;knew;fled;flew,0.0,22
+409,"Bless God, he went as soldiers,",243,9,2,44,32,0.7273,0,0.0,soldiers;breast;bravest;blest;him;white;then;fight,0.0,22
+410,Immortal is an ample word,228,9,2,42,34,0.8095,0,0.0,word;by;time;necessity;proof;know;hand;below,0.0,18
+411,"Where every bird is bold to go,",121,4,1,21,20,0.9524,0,0.0,go;play;knocks;away,0.0,13
+412,"The grave my little cottage is,",218,9,2,37,34,0.9189,0,0.0,is;thee;orderly;tea;briefly;be;unite;society,0.0,23
+413,"This was in the white of the year,",248,9,2,46,36,0.7826,0,0.0,year;green;think;seen;left;before;half;more,0.0,18
+414,Sweet hours have perished here;,129,4,1,21,20,0.9524,0,0.0,here;room;played;tomb,0.0,11
+415,Me! Come! My dazzled face,241,14,5,44,33,0.75,0,0.0,face;place;ear;near;meet;feet;be;me;fame;name,0.0,23
+416,INVISIBLE.,223,10,2,40,36,0.9,0,0.0,year;unknown;feet;zone;lived;be;year;mystery,0.125,21
+417,"I wish I knew that woman's name,",252,9,2,51,40,0.7843,0,0.0,name;way;ears;say;again;i;sleep;lullaby,0.0,23
+418,TRYING TO FORGET.,478,20,4,87,57,0.6552,0,0.0,abroad;be;peninsula;me;myself;bed;upon;head;awake;me;crowd;sea;drowse;away;spade;memory,0.0625,42
+419,"I felt a funeral in my brain,",508,19,4,92,67,0.7283,0,0.0,brain;fro;seemed;through;seated;drum;thought;numb;box;soul;again;toll;bell;ear;race;here,0.0,43
+420,I meant to find her when I came;,362,14,3,70,49,0.7,0,0.0,came;design;seems;mine;longed;time;first;him;abode;be;hurricane;me,0.0,26
+421,WAITING.,228,10,2,46,35,0.7609,0,0.0,waiting;tie;house;i;approaching;day;sang;away,0.0,20
+422,A sickness of this world it most occasions,209,9,2,33,29,0.8788,0,0.0,occasions;die;condition;occupy;foreign;be;contented;deity,0.0,18
+423,Superfluous were the sun,333,14,3,58,48,0.8276,0,0.0,sun;dead;day;said;faith;despair;hesitates;';fame;lie;anonymous;sky,0.0,36
+424,So proud she was to die,217,9,2,38,31,0.8158,0,0.0,die;ashamed;unknown;seemed;go;be;stooped;jealousy,0.0,18
+425,FAREWELL.,492,20,4,100,62,0.62,1,0.01,lord;go;horses;do;side;fall;judgment;hill;bridges;sea;race;thee;live;know;once;go,0.0625,43
+426,"The dying need but little, dear, â",235,9,2,42,35,0.8333,0,0.0,dear;all;face;wall;regret;one;rainbow;gone,0.0,24
+427,DEAD.,358,15,3,61,51,0.8361,1,0.0164,sleep;room;breast;name;it;hand;gravity;understand;neighbors;';periphrasis;fled,0.0,31
+428,"The soul should always stand ajar,",250,9,2,44,37,0.8409,0,0.0,ajar;inquire;wait;her;slid;door;guest;more,0.0,20
+429,"Three weeks passed since I had seen her, â",345,14,3,58,48,0.8276,0,0.0,her;vexed;singing;next;pleasure;alone;any;none;either;night;people;sight,0.0,30
+430,"I breathed enough to learn the trick,",258,9,2,44,36,0.8182,0,0.0,trick;air;well;sure;descend;cells;himself;feels,0.0,24
+431,I wonder if the sepulchre,119,4,1,24,21,0.875,0,0.0,sepulchre;way;june;hay,0.0,11
+432,JOY IN DEATH.,254,10,2,53,40,0.7547,0,0.0,cause;';tone;sad;tell;heaven;way;given,0.0,29
+433,If I may have it when it's dead,390,14,3,82,54,0.6585,0,0.0,dead;be;out;me;grave;weigh;grave;key;thee;be;say;thee,0.25,31
+434,"Before the ice is in the pools,",423,19,4,78,57,0.7308,0,0.0,pools;go;nightfall;snow;finished;tree;wonder;me;of;day;walking;away;so;here;in;wear,0.0,32
+435,DYING.,522,20,4,92,63,0.6848,0,0.0,died;form;air;storm;dry;sure;king;power;away;i;then;fly;buzz;me;then;see,0.0625,44
+436,Adrift! A little boat adrift!,407,15,3,70,46,0.6571,0,0.0,adrift;down;boat;town;yesterday;brown;strife;down;yesterday;red;gales;sails;sped,0.1538,41
+437,There's been a death in the opposite house,722,29,6,131,84,0.6412,1,0.0076,house;day;look;alway;out;away;pod;mechanically;out;by;that;boy;in;his;now;besides;man;trade;house;parade;soon;sign;news;town,0.0833,59
+438,"We never know we go, â when we are going",133,4,1,26,21,0.8077,0,0.0,going;door;it;more,0.0,13
+439,THE SOUL'S STORM.,360,15,3,67,48,0.7164,0,0.0,day;new;slit;through;night;dream;sight;beam;brief;by;this;sky,0.0,32
+440,Water is taught by thirst;,154,6,1,26,20,0.7692,0,0.0,thirst;passed;throe;told;mould;snow,0.0,16
+441,THIRST.,231,10,2,39,35,0.8974,0,0.0,act;die;supplicate;by;want;supply;west;immortality,0.0,24
+442,A clock stopped â not the mantel's;,474,19,4,78,64,0.8205,0,0.0,mantel's;skill;bowing;still;trinket;pain;decimals;noon;doctors;snow;it;no;pointers;slim;between;him,0.0,43
+443,CHARLOTTE BRONTÃ'S GRAVE.,601,25,5,93,80,0.8602,0,0.0,moss;weed;';laid;others;became;latitudes;same;returning;green;meet;seen;wanderings;tell;anguish;asphodel;eden;ear;heaven;there,0.0,54
+444,A toad can die of light!,169,8,1,32,26,0.8125,0,0.0,light;right;men;midge;privilege;then;supremacy;thine,0.0,17
+445,Far from love the Heavenly Father,232,9,2,39,29,0.7436,0,0.0,father;child;briar;mild;dragon;friend;predestined;land,0.0,23
+446,SLEEPING.,240,10,2,45,38,0.8444,0,0.0,sleep;dawn;lid;one;this;stone;away;noon,0.0,25
+447,RETROSPECT.,794,30,6,146,96,0.6575,0,0.0,died;corn;farms;on;look;mill;out;will;wedged;between;fields;in;least;came;plates;sum;high;glee;reach;me;so;be;year;me,0.0417,69
+448,ETERNITY.,14241,462,4,2744,1010,0.3681,7,0.0026,sea;silently;ho;shore;roar;o'er;west;rest;fast;thee;eternity;last;lines;walk;face;mantel's;some;thought;itself;street;tree;grace;hill;spring;man;sleep;petite;note;grass;heart;is;evanescence;thorn;days;occasions;away;said;day;night;day;features;light;dead;highest;adrift;afraid;years;moss;do;bed;hills;air;silver;morning;surprise;name;pain;sit;night;complaint;flower;grief;was;bird;identified;left;death;out;pools;spring;letter;abroad;sing;purple;soldiers;cup;eden;indefinite;divine;heat;in;between;insect;significant;know;pictorial;judgment;girdle;companion;whom;pitiful;centre;us;to;wrung;near;nought;me;going;father;birds;drop;myself;one;venture;instant;has;pink;girls;butterfly;year;thee;over;bird;gentian;angels;heaven;him;out;away;heart;words;spirit;narrow;life;know;mine;him;reach;it;bird;is;glutton;feathers;sing;stone;staggered;stand;sunset;thing;trick;wine;grief;you;scarce;so;rides;mind;brain;thought;so;him;bliss;golden;years;awake;because;speak;this;yet;died;fingers;flower;strives;road;exists;agony;miles;face;know;day;come;came;needs;meet;escape;twice;moor;disappeared;steadily;short;over;see;friend;waiting;dog;plank;brewed;rise;stand;hand;heaven;her;name;sepulchre;wheat;home;rose;theirs;you;that;here;eye;breaking;dead;die;alive;dead;forgetting;';cause;fall;word;say;physician;abyss;through;regard;thought;abroad;easier;sieves;running;day;tossed;up;man;light;weep;saved;one;death;dream;giants;red;plush;eyes;life;face;election;old;dew;parted;sense;everywhere;tease;gown;bird;close;thee;doubt;yellow;mother;go;year;me;grave;face;come;broken;create;abroad;blaze;they;night;lot;rose;sea;rest;series;all;haunted;touched;advanced;swiss;bear;blank;flower;astray;punctual;away;heart;faces;implement;lawn;it;strove;front;awake;chambers;died;down;dropped;tree;brooms;dew;be;her;die;plush;church;fair;be;winds;again;them;music;spot;sweetest;be;sun;fate;careful;here;secrets;morning;beggar;love;ended;stir;us;wings;me;outside;marrow;sky;groove;house;gown;laid;sang;sun;o'clock;gone;dear;heard;fringes;do;is;first;lived;interchange;sea;gold;were;plain;bee;ceased;plants;unrealized;scant;day;saw;creature;honey;tenant;keeps;one;cheek;show;secret;mean;society;ajar;itself;artist;landscape;grave;morning;still;film;this;grass;not;full;bugle;prefer;nobleness;word;book;light;house;sleep;back;stars;';day;world;washes;worst;year;conclusion;late;her;suffering;joy;thou;pipe;lord;brave;ostensibly;sing;parts;dear;pain;surpasses;gain;bee;conferred;days;kinds;pearls;time;died;went;boat;noon;spar;attaches;turn;wretch;late;death;thirst;face;retreating;purple;are;going;things;paste;act;evening;wait;this;well;creatures;feared;died;done;dear;go;toss;sea;came;below;unprepared;joy;woods;asked;nights;morning;reach;out;legacies;you;poverty;dickinson,0.2358,1469

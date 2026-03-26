@@ -1,0 +1,130 @@
+---
+title: "Emily Dickinson — Poems"
+format:
+  html:
+    toc: true
+    number-sections: false
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+```{r}
+source("../../../prep (May 2025).R")
+library(readr)
+library(gt)
+library(htmltools)
+
+```
+
+<style>
+/* Keep all GT table cell content inside the cell */
+.gt_table { table-layout: fixed !important; width: 100% !important; }
+.gt_table .gt_cell {
+  white-space: pre-wrap !important;
+  word-break: break-word !important;
+  overflow-wrap: anywhere !important;
+}
+/* Optional: headings wrap */
+.gt_table .gt_col_heading { white-space: pre-wrap !important; }
+</style>
+
+
+```{r}
+#| label: setup
+
+poems <- read_csv("../data/dickinson analyzed.csv",
+  col_types = cols(
+    poem_id = col_double(),
+    .default = col_character()
+  ),
+  show_col_types = FALSE
+)
+
+for (nm in c("title","text","summary","topics","synopsis")) {
+  if (!nm %in% names(poems)) poems[[nm]] <- NA_character_
+}
+
+poems <- poems |>
+  mutate(
+    title    = coalesce(title, ""),
+    text     = coalesce(text, ""),
+    summary  = coalesce(summary, ""),
+    topics   = coalesce(topics, ""),
+    synopsis = coalesce(synopsis, "")
+  )
+```
+
+```{r}
+#| label: helpers
+#| echo: false
+#| include: false
+split_tags <- function(x) {
+  x <- trimws(ifelse(is.null(x), "", x))
+  if (identical(x, "") || is.na(x)) return(character())
+  parts <- unlist(strsplit(x, "\\s*[|,]\\s*"))
+  parts[nzchar(parts)]
+}
+```
+
+```{r}
+#| label: render
+#| results: asis
+
+split_tags <- function(x){
+  x <- trimws(ifelse(is.null(x), "", x))
+  if (identical(x, "") || is.na(x)) return(character())
+  parts <- unlist(strsplit(x, "\\s*[|,]\\s*"))
+  parts[nzchar(parts)]
+}
+
+poems_sorted <- poems |> arrange(poem_id, title)
+
+for (i in seq_len(nrow(poems_sorted))) {
+  this <- poems_sorted[i, ]
+  if (str_trim(this$title) == "" && str_trim(this$text) == "") next
+
+  header <- paste0(
+    if (!is.na(this$poem_id)) paste0(this$poem_id, " — ") else "",
+    this$title
+  )
+  cat("## ", header, "\n\n", sep = "")
+
+  # Build left cell as raw HTML; convert newlines to <br>
+  poem_html <- htmlEscape(this$text)
+  poem_html <- gsub("\r\n|\n|\r", "<br/>", poem_html)
+
+  # Build right cell as markdown/HTML
+  summary_html  <- if (nzchar(this$summary))  paste0("**Summary**\n\n",  this$summary,  "\n\n") else ""
+  synopsis_html <- if (nzchar(this$synopsis)) paste0("**Synopsis**\n\n", this$synopsis, "\n\n") else ""
+  tags <- split_tags(this$topics)
+  topics_html <- if (length(tags)) {
+    paste0("**Topics**\n\n", paste(sprintf('<span class="topic-chip">%s</span>', htmlEscape(tags)), collapse = " "), "\n\n")
+  } else ""
+
+  # Table data
+  tbl <- tibble(
+    `Poem`  = html(paste0("<div class='poem-cell'>", poem_html, "</div>")),
+    `Notes` = md(paste0(summary_html, synopsis_html, topics_html))
+  )
+
+  gt_tbl <- gt(tbl) |>
+    fmt_markdown(columns = "Notes") |>          # Only Notes is markdown; Poem is raw HTML
+    cols_width(
+      Poem  ~ pct(50),
+      Notes ~ pct(50)
+    ) |>
+    tab_options(
+      table.width = pct(100),
+      data_row.padding = px(6)
+    ) |>
+    tab_style(                                  # Ensure left alignment and wrapping
+      style = cell_text(align = "left"),
+      locations = cells_body(columns = c(Poem, Notes))
+    )
+
+  print(gt_tbl)
+  cat("\n\n")
+}
+```
