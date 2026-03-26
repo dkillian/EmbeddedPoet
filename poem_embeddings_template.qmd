@@ -1,0 +1,511 @@
+---
+title: "Poem Embeddings Explorer"
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    code-fold: true
+    self-contained: true
+---
+
+> **Requires:** An OpenAI API key stored as `OPENAI_API_KEY` in your `.Renviron`
+> (run `usethis::edit_r_environ()` to open it). You'll also need
+> `install.packages(c("openai", "ggrepel"))` if not already installed.
+
+---
+
+## Configuration
+
+This is the only section you need to edit when switching poems. All downstream
+chunks read from the objects defined here.
+
+```{r}
+#| label: config
+
+library(tidyverse)
+library(openai)
+
+# ── 1. Poem metadata ──────────────────────────────────────────────────────────
+poem_title  <- "Digging"
+poem_author <- "Seamus Heaney"
+
+# ── 2. Poem text ──────────────────────────────────────────────────────────────
+# Paste the full poem as a plain string.
+# Separate stanzas with a blank line; the parser does the rest.
+poem_raw <- "
+Between my finger and my thumb
+The squat pen rests; snug as a gun.
+
+Under my window, a clean rasping sound
+When the spade sinks into gravelly ground:
+My father, digging. I look down
+
+Till his straining rump among the flowerbeds
+Bends low, comes up twenty years away
+Stooping in rhythm through potato drills
+Where he was digging.
+
+The coarse boot nestled on the lug, the shaft
+Against the inside knee was levered firmly.
+He rooted out tall tops, buried the bright edge deep
+To scatter new potatoes that we picked,
+Loving their cool hardness in our hands.
+
+By God, the old man could handle a spade.
+Just like his old man.
+
+My grandfather cut more turf in a day
+Than any other man on Toner's bog.
+Once I carried him milk in a bottle
+Corked sloppily with paper. He straightened up
+To drink it, then fell to right away
+Nicking and slicing neatly, heaving sods
+Over his shoulder, going down and down
+For the good turf. Digging.
+
+The cold smell of potato mould, the squelch and slap
+Of soggy peat, the curt cuts of an edge
+Through living roots awaken in my head.
+But I've no spade to follow men like them.
+
+Between my finger and my thumb
+The squat pen rests.
+I'll dig with it.
+"
+
+# ── 3. Stanza arc reference points ────────────────────────────────────────────
+# Which stanzas to compare all others against in the arc plot?
+# Use 1-based integer indices. NA resolves to the last stanza.
+arc_refs <- c(1L, NA)
+
+# ── 4. Concept probes ─────────────────────────────────────────────────────────
+# Named character vector: the name is the display label, the value is the
+# phrase sent to the embedding model. Specific phrases work better than
+# single words — give the model enough context to anchor the concept.
+concept_probes <- c(
+  "physical labour and toil" = "physical labour and toil",
+  "memory and the past"      = "memory and the past",
+  "writing and the pen"      = "writing and the pen",
+  "nature and the earth"     = "nature and the earth",
+  "family and ancestry"      = "family and ancestry"
+)
+
+# ── 5. Topic keywords (whole-poem scoring) ────────────────────────────────────
+# A plain character vector of keywords or short phrases. These are used to
+# produce a single topic-score vector for the whole poem — useful for
+# comparing poems against each other later.
+# Single concrete words work fine; abstract concepts benefit from a short phrase.
+topic_keywords <- c("memory", "labor", "father", "legacy")
+```
+
+---
+
+## Parse
+
+```{r}
+#| label: parse
+#| dependson: "config"
+
+# Split on blank lines → stanzas; split stanzas on newlines → lines
+stanza_texts <- str_split(str_trim(poem_raw), "\n\\s*\n")[[1]] |>
+  str_trim() |>
+  keep(\(x) nchar(x) > 0)
+
+poem_stanzas <- tibble(
+  stanza_num = seq_along(stanza_texts),
+  # Single-string version for embedding (newlines → spaces)
+  text       = str_replace_all(stanza_texts, "\\s*\n\\s*", " "),
+  # Short label: stanza number + first few words
+  label      = paste0("S", stanza_num, ": ",
+                      str_trunc(str_extract(stanza_texts, "^[^\n]+"), 22))
+)
+
+poem_lines <- map(seq_along(stanza_texts), \(i) {
+  lines <- str_split(stanza_texts[i], "\n")[[1]] |>
+    str_trim() |>
+    keep(\(x) nchar(x) > 0)
+  tibble(stanza = i, text = lines)
+}) |>
+  list_rbind() |>
+  mutate(line_num = row_number())
+
+# Resolve NA in arc_refs to last stanza index
+arc_refs <- ifelse(is.na(arc_refs), nrow(poem_stanzas), arc_refs)
+
+cat(glue::glue(
+  '"{poem_title}" by {poem_author}\n',
+  '{nrow(poem_lines)} lines across {nrow(poem_stanzas)} stanzas'
+))
+```
+
+---
+
+## The Poem
+
+```{r}
+#| label: display
+#| echo: false
+#| results: asis
+#| dependson: "parse"
+
+cat(sprintf(
+  '::: {style="font-family: Georgia, serif; font-size: 1.05em; line-height: 1.9; max-width: 480px;"}\n\n### %s\n\n*%s*\n\n',
+  poem_title, poem_author
+))
+
+for (st in stanza_texts) {
+  lines <- str_split(st, "\n")[[1]] |> str_trim()
+  cat(paste(lines, collapse = "  \n"))
+  cat("\n\n")
+}
+
+cat(":::\n")
+```
+
+---
+
+## Embeddings
+
+```{r}
+#| label: embeddings
+#| cache: true
+#| dependson: "parse"
+
+embed_texts <- function(texts, model = "text-embedding-3-small") {
+  result <- openai::create_embedding(model = model, input = texts)
+  do.call(rbind, result$data$embedding)
+}
+
+line_emb   <- embed_texts(poem_lines$text)
+stanza_emb <- embed_texts(poem_stanzas$text)
+```
+
+---
+
+## Cosine Similarity
+
+Cosine similarity measures the angle between two embedding vectors: 1 means
+identical direction (very similar meaning), 0 means orthogonal (unrelated).
+
+```{r}
+#| label: cosine-fn
+#| dependson: "embeddings"
+
+cosine_matrix <- function(mat) {
+  norms    <- sqrt(rowSums(mat^2))
+  mat_norm <- mat / norms
+  round(mat_norm %*% t(mat_norm), 3)
+}
+
+line_sim   <- cosine_matrix(line_emb)
+stanza_sim <- cosine_matrix(stanza_emb)
+```
+
+### Line-level heatmap
+
+Each cell shows how semantically similar two lines are. The diagonal is always
+1 (a line compared to itself).
+
+```{r}
+#| label: line-heatmap
+#| fig-width: 9
+#| fig-height: 8
+#| dependson: "cosine-fn"
+
+short_label <- paste0(poem_lines$line_num, ": ",
+                      str_trunc(poem_lines$text, 26))
+
+expand.grid(line_a = seq_len(nrow(line_sim)),
+            line_b = seq_len(nrow(line_sim))) |>
+  mutate(
+    similarity = line_sim[cbind(line_a, line_b)],
+    label_a    = factor(short_label[line_a], levels = short_label),
+    label_b    = factor(short_label[line_b], levels = rev(short_label))
+  ) |>
+  ggplot(aes(x = label_a, y = label_b, fill = similarity)) +
+  geom_tile() +
+  scale_fill_distiller(palette = "Blues", direction = 1,
+                       name = "Cosine\nsimilarity") +
+  theme_minimal(base_size = 8) +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    axis.title  = element_blank(),
+    panel.grid  = element_blank()
+  ) +
+  labs(title = glue::glue("Line-level cosine similarity — {poem_title}"))
+```
+
+### Stanza-level heatmap
+
+```{r}
+#| label: stanza-heatmap
+#| fig-width: 7
+#| fig-height: 6
+#| dependson: "cosine-fn"
+
+expand.grid(stanza_a = seq_len(nrow(stanza_sim)),
+            stanza_b = seq_len(nrow(stanza_sim))) |>
+  mutate(
+    similarity = stanza_sim[cbind(stanza_a, stanza_b)],
+    label_a    = factor(poem_stanzas$label[stanza_a],
+                        levels = poem_stanzas$label),
+    label_b    = factor(poem_stanzas$label[stanza_b],
+                        levels = rev(poem_stanzas$label))
+  ) |>
+  ggplot(aes(x = label_a, y = label_b, fill = similarity)) +
+  geom_tile() +
+  geom_text(aes(label = round(similarity, 2)), size = 3.2) +
+  scale_fill_distiller(palette = "Blues", direction = 1,
+                       name = "Cosine\nsimilarity") +
+  theme_minimal(base_size = 10) +
+  theme(
+    axis.text.x = element_text(angle = 40, hjust = 1),
+    axis.title  = element_blank(),
+    panel.grid  = element_blank()
+  ) +
+  labs(title = glue::glue("Stanza-level cosine similarity — {poem_title}"))
+```
+
+---
+
+## PCA: Lines in Embedding Space
+
+```{r}
+#| label: pca-lines
+#| fig-width: 9
+#| fig-height: 7
+#| dependson: "embeddings"
+
+pca_fit <- prcomp(line_emb, scale. = FALSE)
+var_exp <- summary(pca_fit)$importance["Proportion of Variance", 1:2] * 100
+
+as_tibble(pca_fit$x[, 1:2]) |>
+  bind_cols(poem_lines) |>
+  mutate(short_text = str_trunc(text, 32)) |>
+  ggplot(aes(x = PC1, y = PC2, color = factor(stanza), label = short_text)) +
+  geom_point(size = 3, alpha = 0.85) +
+  ggrepel::geom_text_repel(size = 2.8, max.overlaps = 20,
+                            show.legend = FALSE) +
+  scale_color_brewer(palette = "Set2", name = "Stanza") +
+  labs(
+    title = glue::glue("Lines in PCA embedding space — {poem_title}"),
+    x     = sprintf("PC1 (%.1f%% variance)", var_exp[1]),
+    y     = sprintf("PC2 (%.1f%% variance)", var_exp[2])
+  ) +
+  theme_minimal(base_size = 11)
+```
+
+---
+
+## Most & Least Similar Line Pairs
+
+```{r}
+#| label: top-pairs
+#| dependson: "cosine-fn"
+
+line_sim_pairs <- expand.grid(
+    line_a = seq_len(nrow(line_sim)),
+    line_b = seq_len(nrow(line_sim))
+  ) |>
+  filter(line_a < line_b) |>
+  mutate(
+    similarity = line_sim[cbind(line_a, line_b)],
+    text_a     = poem_lines$text[line_a],
+    text_b     = poem_lines$text[line_b]
+  )
+
+cat("--- Most similar pairs ---\n")
+line_sim_pairs |>
+  slice_max(similarity, n = 8) |>
+  select(similarity, text_a, text_b) |>
+  print()
+
+cat("\n--- Least similar pairs ---\n")
+line_sim_pairs |>
+  slice_min(similarity, n = 8) |>
+  select(similarity, text_a, text_b) |>
+  print()
+```
+
+---
+
+## Stanza Arc
+
+How does each stanza relate semantically to the reference stanzas set in
+`arc_refs`? This is most revealing when the reference stanzas represent
+structural anchors — an opening image, a volta, a closing resolution.
+
+```{r}
+#| label: stanza-arc
+#| fig-width: 8
+#| fig-height: 4
+#| dependson: "cosine-fn"
+
+map(arc_refs, \(ref) {
+  tibble(
+    stanza_num = poem_stanzas$stanza_num,
+    label      = poem_stanzas$label,
+    reference  = paste0("Ref S", ref, ": ",
+                        str_trunc(poem_stanzas$label[ref], 25)),
+    similarity = stanza_sim[, ref]
+  )
+}) |>
+  list_rbind() |>
+  ggplot(aes(x = stanza_num, y = similarity,
+             color = reference, group = reference)) +
+  geom_line(linewidth = 1) +
+  geom_point(size = 3) +
+  scale_x_continuous(breaks = poem_stanzas$stanza_num,
+                     labels = poem_stanzas$label,
+                     guide  = guide_axis(angle = 35)) +
+  scale_color_brewer(palette = "Set1", name = NULL) +
+  labs(
+    title = glue::glue("Stanza similarity to reference points — {poem_title}"),
+    x     = NULL,
+    y     = "Cosine similarity"
+  ) +
+  theme_minimal(base_size = 11) +
+  theme(legend.position = "bottom")
+```
+
+---
+
+## Concept Probing
+
+Individual embedding dimensions are not human-interpretable — meaning is
+distributed across all dimensions simultaneously. But we can define semantic
+directions by embedding a concept phrase and projecting each line onto that
+direction. Edit `concept_probes` in the **Configuration** section at the top
+to change or add concepts.
+
+```{r}
+#| label: concept-probing
+#| cache: true
+#| fig-width: 9
+#| fig-height: 7
+#| dependson: ["embeddings", "config"]
+
+concept_result <- openai::create_embedding(
+  model = "text-embedding-3-small",
+  input = unname(concept_probes)
+)
+concept_mat <- do.call(rbind, concept_result$data$embedding)
+
+l2_norm <- function(mat) mat / sqrt(rowSums(mat^2))
+
+scores <- l2_norm(line_emb) %*% t(l2_norm(concept_mat))
+colnames(scores) <- names(concept_probes)
+
+as_tibble(scores) |>
+  bind_cols(poem_lines |> select(line_num, text)) |>
+  pivot_longer(
+    cols      = all_of(names(concept_probes)),
+    names_to  = "concept",
+    values_to = "score"
+  ) |>
+  mutate(
+    concept    = factor(concept, levels = names(concept_probes)),
+    short_text = fct_inorder(paste0(line_num, ": ", str_trunc(text, 28)))
+  ) |>
+  ggplot(aes(x = short_text, y = score, fill = concept)) +
+  geom_col() +
+  facet_wrap(~ concept, ncol = 1, scales = "free_y") +
+  theme_minimal(base_size = 8) +
+  theme(
+    axis.text.x     = element_text(angle = 55, hjust = 1),
+    legend.position = "none",
+    panel.spacing   = unit(0.8, "lines")
+  ) +
+  labs(
+    title = glue::glue("Line scores along concept directions — {poem_title}"),
+    x     = NULL,
+    y     = "Cosine similarity to concept"
+  )
+```
+
+---
+
+## Whole-Poem Topic Scores
+
+Each keyword is embedded and every line is scored against it via cosine
+similarity. The whole-poem score is the mean across lines, with an alternative
+word-count-weighted mean for poems where line length varies substantially.
+The result is a compact topic-score vector that can be saved and stacked with
+scores from other poems for clustering or comparison.
+
+```{r}
+#| label: topic-scores
+#| cache: true
+#| dependson: ["embeddings", "config"]
+
+kw_result <- openai::create_embedding(
+  model = "text-embedding-3-small",
+  input = topic_keywords
+)
+kw_mat <- do.call(rbind, kw_result$data$embedding)
+
+line_topic_scores <- l2_norm(line_emb) %*% t(l2_norm(kw_mat))
+colnames(line_topic_scores) <- topic_keywords
+
+word_counts <- str_count(poem_lines$text, "\\S+")
+
+poem_topic_vector <- tibble(
+  poem        = poem_title,
+  author      = poem_author,
+  topic       = topic_keywords,
+  mean_score  = round(colMeans(line_topic_scores), 4),
+  wtd_score   = round(apply(line_topic_scores, 2,
+                            \(x) weighted.mean(x, w = word_counts)), 4)
+)
+
+poem_topic_vector
+```
+
+```{r}
+#| label: topic-scores-plot
+#| fig-width: 7
+#| fig-height: 5
+#| dependson: "topic-scores"
+
+# Line-level detail with whole-poem mean as reference
+as_tibble(line_topic_scores) |>
+  bind_cols(poem_lines |> select(line_num, text)) |>
+  pivot_longer(all_of(topic_keywords), names_to = "topic", values_to = "score") |>
+  mutate(
+    topic      = factor(topic, levels = topic_keywords),
+    short_text = fct_inorder(paste0(line_num, ": ", str_trunc(text, 28)))
+  ) |>
+  ggplot(aes(x = short_text, y = score)) +
+  geom_col(fill = "steelblue", alpha = 0.75) +
+  geom_hline(
+    data = poem_topic_vector |> mutate(topic = factor(topic, levels = topic_keywords)),
+    aes(yintercept = mean_score),
+    linetype = "dashed", color = "firebrick", linewidth = 0.7
+  ) +
+  facet_wrap(~ topic, ncol = 1, scales = "free_y") +
+  theme_minimal(base_size = 8) +
+  theme(
+    axis.text.x     = element_text(angle = 55, hjust = 1),
+    legend.position = "none",
+    panel.spacing   = unit(0.8, "lines")
+  ) +
+  labs(
+    title    = glue::glue("Topic scores by line — {poem_title}"),
+    subtitle = "Dashed line = whole-poem mean",
+    x        = NULL,
+    y        = "Cosine similarity to keyword"
+  )
+```
+
+```{r}
+#| label: save-topic-vector
+#| eval: false
+
+# Uncomment and run manually to accumulate scores across poems.
+# Each poem appends one row per topic to the CSV.
+readr::write_csv(
+  poem_topic_vector,
+  "poem_topic_scores.csv",
+  append = file.exists("poem_topic_scores.csv")
+)
+```
