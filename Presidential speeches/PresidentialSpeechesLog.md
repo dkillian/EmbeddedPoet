@@ -91,28 +91,43 @@
 ## Session 3 — March 27, 2026
 
 ### What We Worked On
-- User proposed their own passage boundaries from "The Things That Are Unseen," working from the sentence-level tibble.
-- Added `para_sent_id` and `sent_seq` identifier columns to `things_unseen_sentences.rds` and updated `01_clean_things_unseen.R` accordingly.
-- Coded first two user-defined passages and saved to a new `things_unseen_passages_user.rds`.
+- Resumed after a session interruption; reconstructed context from transcript and log files.
+- Continued user-defined passage coding for "The Things That Are Unseen": added passage 3 (sents. 171–177) — the rhetorical climax of the speech.
+- Consolidated all "Things Unseen" user passages into `things_unseen_coded.rds` alongside the GPT-grouped passages.
+- Began work on a second Coolidge speech: "Declaration of Independence Anniversary Commemoration" (July 5, 1926).
+- Added `parse_json_speech()` to `code_speech_passages.R` to handle the JSON corpus format.
+- Ran a full GPT first pass on the Declaration speech: sentence grouping (23 passages) and PAP coding.
 
 ### What Was Decided
 - The custom thematic scheme is the primary analytical lens; PAP is retained as a reference baseline but codes are expected to be overwritten or supplemented.
 - Custom themes are stored in `custom_theme_1` through `custom_theme_5` columns alongside PAP code columns.
-- First two custom theme labels established: **"Pre-industrial labor as artistic expression"** (sents. 32–40) and **"The artisan as guardian of liberty"** (sents. 41–44).
+- Three custom theme labels established for "Things Unseen": **"Pre-industrial labor as artistic expression"** (sents. 32–40), **"The artisan as guardian of liberty"** (sents. 41–44), and **"Education for Moral and Spiritual Development"** (sents. 171–177).
 - What began as a single passage (sents. 32–44) was split into two when it became clear each theme applied most precisely to a distinct sentence range.
 - **Open question (to revisit each session):** When two themes co-occur in a passage, should they be combined into one passage with multiple codes, or split into separate passages for tighter attribution? Splitting favors precision in idea-tracking; combining preserves argumentative arcs.
+- "The Things That Are Unseen" is complete for now. Work on user-defined passages for the Declaration speech will begin next session.
 
 ### What Was Created
-- `data/things_unseen_passages_user.rds` — user-defined passages tibble with PAP codes and custom theme columns
+- `data/things_unseen_passages_user.rds` — user-defined passages tibble (3 passages) with PAP codes and custom theme columns
+- Updated `data/things_unseen_coded.rds` — now 24 rows: 22 GPT passages + 3 user passages, with `source` column
 - Updated `data/things_unseen_sentences.rds` — now includes `para_sent_id` and `sent_seq`
 - Updated `scripts/01_clean_things_unseen.R` — generates the two new identifier columns
+- `scripts/01_clean_declaration.R` — parses Declaration speech JSON into paragraphs and sentences
+- `scripts/02_analyze_declaration.R` — GPT grouping and PAP coding pipeline for the Declaration speech
+- `data/declaration_paragraphs.rds` — 31-row tibble: `para_id`, `paragraph`
+- `data/declaration_sentences.rds` — 207-row tibble: `para_sent_id`, `sent_seq`, `para_id`, `sent_id`, `sentence`
+- `data/declaration_passages.rds` — 23-row tibble: GPT-grouped passages with themes
+- `data/declaration_coded.rds` — 23-row tibble: passages + PAP codes + custom_theme columns (all NA, pending user input)
+- Updated `scripts/code_speech_passages.R` — added `parse_json_speech()` function
 
 ### Risks & Uncertainties
-- PAP codes on these passages are poor fits — the codebook lacks vocabulary for philosophical and intellectual-historical content. Custom themes are doing the real work.
-- The `things_unseen_passages_user.rds` file will grow passage by passage; a dedicated analysis script (`02_analyze_things_unseen_user.R`) should be created once the passage set is more developed.
+- PAP codes are a poor fit for founding-era philosophical and religious content; they are particularly unhelpful for the Declaration speech. Custom themes will do the real work.
+- GPT passage 7 in "Things Unseen" (sents. 29–44) overlaps with user passages 1 and 2 (32–40 and 41–44). This will need to be addressed in corpus-level analysis.
+- Rate limiting from the OpenAI API was encountered during the Declaration coding pass; the exponential backoff handled it, but a more principled throttling strategy will be needed at corpus scale.
+- A dedicated analysis script (`02_analyze_things_unseen_user.R`) for the user passage workflow still needs to be created.
 
 ### Steps for Next Session
-- Continue proposing and coding user-defined passages from "The Things That Are Unseen."
+- Begin user-defined passage coding for the Declaration of Independence speech.
 - Revisit the split-vs-combine question as new passages are added.
 - Create `scripts/02_analyze_things_unseen_user.R` to formalize the user passage workflow.
 - Consider whether a growing custom theme vocabulary needs its own reference file (analogous to `policy_agendas_codebook.csv`).
+- Begin thinking about generalizing the clean and analyze scripts into corpus-wide pipeline functions.

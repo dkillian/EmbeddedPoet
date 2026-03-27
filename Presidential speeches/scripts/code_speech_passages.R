@@ -63,6 +63,29 @@ parse_speech_passages <- function(txt_path) {
 }
 
 
+# ── 1b. Parse a JSON speech file into paragraphs ──────────────────────────────
+
+parse_json_speech <- function(json_path, min_chars = 80) {
+
+  raw        <- jsonlite::fromJSON(json_path)
+  transcript <- raw$transcript
+
+  # Split on <br /> paragraph breaks
+  paragraphs <- stringr::str_split(transcript, "<br />\\n?")[[1]]
+
+  # Strip any remaining HTML tags
+  paragraphs <- stringr::str_remove_all(paragraphs, "<[^>]+>")
+
+  # Normalize whitespace
+  paragraphs <- stringr::str_squish(paragraphs)
+
+  # Filter short paragraphs (salutations, headings, etc.)
+  paragraphs <- paragraphs[nchar(paragraphs) > min_chars]
+
+  paragraphs
+}
+
+
 # ── Helper: extract JSON from a model response string ─────────────────────────
 
 extract_json <- function(text) {
