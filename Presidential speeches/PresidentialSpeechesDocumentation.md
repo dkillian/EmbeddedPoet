@@ -1,8 +1,16 @@
-# Presidential Speeches — Qualitative Coding Project
+# The presence and persistence of ideas in American intellectual history
 
 ## Overview
 
-This project applies the **Policy Agendas Project (PAP)** topic coding scheme to presidential speeches. The workflow uses the OpenAI API (GPT-4o) to (1) segment speech text into thematic passages and (2) assign up to three PAP topic codes to each passage.
+This project traces the occurrence of ideas across the history of the United States, as expressed in our founding documents and subsequently in documents that engage, appraise, and interpret American values and identity. While many sources of information may participate in the engagement of American values and identity, the primary source material used here are from presidential speeches and other major documents from American history. Therefore, the lineage of ideas over time is reflected more at aggregate level, and may not capture more dynamic movements in American intellectual life that more vigorously or controversially engage American values and identity. 
+
+## Methods
+
+This project applies the **Policy Agendas Project (PAP)** topic coding scheme as an initial pass over presidential speeches. Additional bespoke review and coding refines this scheme. The workflow uses the OpenAI API (GPT-4o) to (1) segment speech text into thematic passages and (2) assign up to five topic codes to each passage. 
+
+## Presentation
+
+Upon coding of passages, presentation will show the presence and persistence of ideas pertaining to American values and identity over time. 
 
 ---
 
@@ -33,8 +41,12 @@ All work lives under:
 | `scripts/parse_policy_agendas_codebook.R` | Parses the PAP PDF into `policy_agendas_codebook.csv` using `pdftools` |
 | `scripts/code_speech_passages.R` | Main coding pipeline (parse → group → code via GPT-4o) |
 | `scripts/01_clean_things_unseen.R` | Parses and segments "The Things That Are Unseen" into paragraph and sentence tibbles; saves to `data/` |
+| `scripts/02_analyze_things_unseen.R` | Groups sentences into passages, assigns PAP codes via GPT-4o, applies manual corrections; saves to `data/` |
 | `data/things_unseen_paragraphs.rds` | 25-row tibble: `para_id`, `paragraph` |
-| `data/things_unseen_sentences.rds` | 182-row tibble: `para_id`, `sent_id`, `sentence` |
+| `data/things_unseen_sentences.rds` | 182-row tibble: `para_sent_id`, `sent_seq`, `para_id`, `sent_id`, `sentence` |
+| `data/things_unseen_passages.rds` | 22-row tibble: `passage_id`, `sent_ids`, `para_ids`, `theme`, `text` — GPT-grouped passages |
+| `data/things_unseen_coded.rds` | 22-row tibble: GPT-grouped passages + up to 5 PAP code columns; includes manual corrections for passages 6 and 21 |
+| `data/things_unseen_passages_user.rds` | User-defined passages + PAP codes + custom theme columns (`custom_theme_1` through `custom_theme_5`); primary analytical object for thematic coding |
 | `viz/` | Empty — visualizations not yet created |
 | `tables/` | Does not yet exist |
 | `models/` | Does not yet exist |
@@ -44,7 +56,7 @@ All work lives under:
 
 ---
 
-## PAP Codebook Structure
+## Codebook Structure
 
 21 major topic areas (no topic 11):
 
@@ -81,13 +93,32 @@ Main function: `code_speech_passages(txt_path, codebook_path, model = "gpt-4o")`
 
 **Steps:**
 1. `parse_speech_passages()` — reads a `.txt` file, removes OCR artifacts and page headers, detects paragraph starts via 3+ leading spaces before a capital letter, returns a character vector of paragraphs (min length 80 chars).
-2. `group_paragraphs()` — sends numbered paragraphs to GPT-4o; returns a tibble with `passage_id`, `paragraph_ids`, `theme`, `text`.
+2. `group_sentences()` — sends numbered sentences to GPT-4o; returns a tibble with `passage_id`, `sent_ids`, `para_ids`, `theme`, `text`.
 3. `build_codebook_string()` — formats `policy_agendas_codebook.csv` as a compact string for use in prompts.
-4. `code_passage()` — sends each passage + codebook to GPT-4o; returns a wide-format row with up to 3 PAP codes (`major_code_1`, `major_name_1`, `subtopic_code_1`, `subtopic_name_1`, ... `_3`).
+4. `code_passage()` — sends each passage + codebook to GPT-4o; returns a wide-format row with up to 5 PAP codes (`major_code_1`, `major_name_1`, `subtopic_code_1`, `subtopic_name_1`, ... `_5`).
 
-**Output:** A tibble with one row per passage, containing passage metadata + 12 code columns.
+**Output:** A tibble with one row per passage, containing passage metadata + 20 PAP code columns.
 
 **Requirements:** `OPENAI_API_KEY` in `.Renviron`; packages `openai`, `tidyverse`, `jsonlite`.
+
+## Custom Thematic Coding Scheme
+
+PAP codes serve as an initial reference pass. The primary analytical lens is a **custom thematic scheme** developed collaboratively through close reading of the corpus. Custom themes are stored in `custom_theme_1` through `custom_theme_5` columns in the user passages object.
+
+**Design principles:**
+- Themes are concise, analytically durable labels intended to recur across speeches and presidents.
+- PAP codes are retained alongside custom themes and may be overwritten or supplemented as the scheme matures.
+- Where PAP subtopics are too vague or inapplicable, custom labels are introduced freely; retrofitting back onto earlier PAP passes is a future task.
+- **Open question (revisit each session):** When two themes co-occur in a passage, should they be combined into one passage with multiple codes, or split into separate passages for tighter attribution?
+
+**Custom themes established so far:**
+
+| Theme | First occurrence |
+|-------|-----------------|
+| Pre-industrial labor as artistic expression | Things Unseen, sents. 32–40 |
+| The artisan as guardian of liberty | Things Unseen, sents. 41–44 |
+| Epistemic Humility | Things Unseen, passage 6 (PAP subcode 610) |
+| Education for Moral and Spiritual Development | Things Unseen, passage 21 (PAP subcode 611) |
 
 ---
 

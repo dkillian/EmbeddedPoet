@@ -9,6 +9,7 @@
 # Outputs:
 #   data/things_unseen_paragraphs.rds  -- one row per paragraph (25 rows)
 #   data/things_unseen_sentences.rds   -- one row per sentence  (182 rows)
+#                                          cols: para_sent_id, sent_seq, para_id, sent_id, sentence
 #
 # Both share para_id as a common key.
 
@@ -39,7 +40,11 @@ things_unseen_sentences <- tibble(
   mutate(sentence = tokenize_sentences(text)) |>
   unnest(sentence) |>
   mutate(sent_id = row_number(), .by = para_id) |>
-  select(para_id, sent_id, sentence)
+  mutate(
+    para_sent_id = paste(para_id, sent_id, sep = "_"),
+    sent_seq     = row_number()
+  ) |>
+  select(para_sent_id, sent_seq, para_id, sent_id, sentence)
 
 # ── 4. Save to data/ ──────────────────────────────────────────────────────────
 

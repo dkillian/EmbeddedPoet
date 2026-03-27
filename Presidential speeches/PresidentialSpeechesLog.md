@@ -85,3 +85,34 @@
 - Begin work on a JSON speech parser to unlock the bulk of the corpus.
 - Begin thinking about how to generalize `01_clean_*` and `02_analyze_*` into corpus-wide pipeline functions.
 - Consider whether additional custom codes are needed as more speeches are processed.
+
+---
+
+## Session 3 — March 27, 2026
+
+### What We Worked On
+- User proposed their own passage boundaries from "The Things That Are Unseen," working from the sentence-level tibble.
+- Added `para_sent_id` and `sent_seq` identifier columns to `things_unseen_sentences.rds` and updated `01_clean_things_unseen.R` accordingly.
+- Coded first two user-defined passages and saved to a new `things_unseen_passages_user.rds`.
+
+### What Was Decided
+- The custom thematic scheme is the primary analytical lens; PAP is retained as a reference baseline but codes are expected to be overwritten or supplemented.
+- Custom themes are stored in `custom_theme_1` through `custom_theme_5` columns alongside PAP code columns.
+- First two custom theme labels established: **"Pre-industrial labor as artistic expression"** (sents. 32–40) and **"The artisan as guardian of liberty"** (sents. 41–44).
+- What began as a single passage (sents. 32–44) was split into two when it became clear each theme applied most precisely to a distinct sentence range.
+- **Open question (to revisit each session):** When two themes co-occur in a passage, should they be combined into one passage with multiple codes, or split into separate passages for tighter attribution? Splitting favors precision in idea-tracking; combining preserves argumentative arcs.
+
+### What Was Created
+- `data/things_unseen_passages_user.rds` — user-defined passages tibble with PAP codes and custom theme columns
+- Updated `data/things_unseen_sentences.rds` — now includes `para_sent_id` and `sent_seq`
+- Updated `scripts/01_clean_things_unseen.R` — generates the two new identifier columns
+
+### Risks & Uncertainties
+- PAP codes on these passages are poor fits — the codebook lacks vocabulary for philosophical and intellectual-historical content. Custom themes are doing the real work.
+- The `things_unseen_passages_user.rds` file will grow passage by passage; a dedicated analysis script (`02_analyze_things_unseen_user.R`) should be created once the passage set is more developed.
+
+### Steps for Next Session
+- Continue proposing and coding user-defined passages from "The Things That Are Unseen."
+- Revisit the split-vs-combine question as new passages are added.
+- Create `scripts/02_analyze_things_unseen_user.R` to formalize the user passage workflow.
+- Consider whether a growing custom theme vocabulary needs its own reference file (analogous to `policy_agendas_codebook.csv`).
